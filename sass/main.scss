@@ -1,4 +1,4 @@
-@import "./utils/variables";
+/*@import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
@@ -16,6 +16,65 @@
 
 @import "./pages/work";
 @import "./pages/about";
-@import "./pages/project";
-@import "./main.css";
+@import "./pages/project";*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*a
+{
+    text-decoration: none;
+    color: black;
+}
+
+h2 h3 h4 p
+ {
+     font-family: 'roboto','sans-serif';
+ }
+
+ h4
+ {
+     font-size: 20px;
+ }
+
+ /**********Header**********/
+header
+{
+    display: flex;
+    width: 100%;
+    height: 65px;
+ 
+}
+
+.header__logo
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/**********Section 1:location**********/
+.location
+{
+    background-color:rgb(222, 218, 218);/*mettre variable avec couleur foncée*/
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    &__city
+    {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+    }
+}
+/**********Section 2:Introduction**********/
+
 
