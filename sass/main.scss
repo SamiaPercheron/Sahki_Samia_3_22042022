@@ -39,14 +39,27 @@ h2 h3 h4 p
  h4
  {
      font-size: 20px;
+    
  }
 
+ p
+ {
+    font-size:19px;
+ }
+#bloc-page
+{
+    width: auto;
+}
  /**********Header**********/
 header
 {
     display: flex;
     width: 100%;
     height: 65px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 2;
+    z-index: 2;
  
 }
 
@@ -63,6 +76,7 @@ header
 {
     background-color:rgb(222, 218, 218);/*mettre variable avec couleur foncée*/
     height: 50px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,9 +86,142 @@ header
     display: flex;
     flex-direction: row;
     gap: 20px;
-    
+   
     }
 }
 /**********Section 2:Introduction**********/
+.top
+{
+    display: flex;
+    height: 290px;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 50px 30px 50px 30px;
+    background-color: #f2f2f2;
+}
+.top__introduction
+    {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    gap: 20px;
+}
+
+.explore
+{
+    display: flex;
+    justify-content: center;/*ne fonctionne pas*/
+    width: 300px;
+    height: 100%;
+    color: white;
+    background: linear-gradient(360deg, rgba(147,86,192,1) 2%, rgba(255,121,218,1) 87%);
+    padding: 20px 20px ;
+    border-radius: 40px;
+    margin-top: 50px;
+    cursor: pointer;/*suffisant?*/
+}
+
+.explore p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/*
+.explore >p centrer le saut à la ligne
+{
+   
+}*/
+
+.function
+{
+    display: flex;
+    flex-direction: column;
+    height: 440px;
+    gap: 20px;
+    padding-top: 50px;
+    padding-bottom:50px ;
+   
+    &__steps
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;/*centré ou pas en responsive ?*/
+        align-items: center;
+        margin-right: 10px;
+        gap: 20px;
+    }
+}
+.frame
+{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #f2f2f2;
+    width: 340px;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 30px;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 25px;
+    padding: 40px 40px;
+
+}
+.number
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        margin-left: -340px;
+        border: 1px solid #9356dc;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #9356dc;
+        color: white;
+    }
+
+.icone,.icone-purple
+{
+    font-size: 25px;  
+}    
+.icone
+{
+    color: grey;
+  
+}
+
+.icone-purple
+{
+    color: #9356dc;
+}
+
+/*mettre le titre fonctionnement à gauche*/
+
+.font
+{
+    font-weight: bold;
+   
+}
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+
 
 
