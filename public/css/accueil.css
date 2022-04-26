@@ -1,45 +1,120 @@
 @charset "UTF-8";
-/*$colour-primary: #15DEA5;
-$colour-secondary: #001534;
-$colour-accent: #D6FFF5;
-$colour-white: #fff;
-$colour-invalid: #DB464B;
+/**,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
 
-$heading-shadow-size: .55rem;
-$layout-margin: 6rem;
-$grid-gutter: $layout-margin * .25;*/
-/*?*/
-/*foncer la couleur pour la partie localisation*/
-/*@import "./utils/functions";
-/*@import "./utils/mixins";
-@import "./utils/extensions";
+html {
+    // 10px div by def of 16px
+    font-size: 62.5%;
+}
 
-@import "./base/base";
-@import "./base/typography";
+body {
+    box-sizing: border-box;
+    background: $colour-secondary;
+}
+*/
+/*body {
+    font-family: 'Roboto', sans-serif;
+    color: $colour-primary;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.7;
+}
 
-@import "./components/buttons";
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    font-style: italic;
+}
 
-@import "./layout/header";
-@import "./layout/nav";
-@import "./layout/container";
-@import "./layout/form";
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+}
 
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.75rem;*/
+h2 h3 h4 p {
+  font-family: h2 h3 h4 p roboto;
+}
 
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";*/
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 19px;
+}
+
+/*.btn {
+    @include btn
+}
+*/
+/**********Header**********/
+header {
+  display: flex;
+  width: 100%;
+  height: 65px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+header__logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 20px;
+  background-color: aqua;
+}
+
+.footer__logo > img {
+  color: white;
+}
+
+.footer__logo {
+  color: white;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+}
+.footer__info ul {
+  list-style-type: none;
+}
+.footer__info ul li {
+  display: flex;
+  flex-direction: row;
+}
+
 /**********Section 4:Restaurants**********/
-@import url();
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 .resto {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   background-color: #f2f2f2;
-  padding: 20px 20px;
-  margin-bottom: 500px;
+  padding: 60px 20px 60px 20px;
+}
+.resto__titre {
+  font-size: 19px;
 }
 .resto__container {
   display: flex;
@@ -51,28 +126,25 @@ $grid-gutter: $layout-margin * .25;*/
 .resto__container__card {
   background-color: white;
   width: 100%;
-  height: 200px;
+  height: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  border-radius: 20px;
+  border-radius: 15px;
   position: relative;
 }
 .resto__container__card .img {
+  display: flex;
   width: 100%;
-  height: 65%;
+  height: 70%;
   text-decoration: none;
 }
 .resto__container__card .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 15px 15px 0 0;
 }
-.resto__container__card .img .info {
-  width: 100%;
-  height: 35%;
-}
-.resto__container__card .img p {
+.resto__container__card .img span {
   color: rgb(23, 125, 89);
   position: absolute;
   top: 15px;
@@ -84,7 +156,76 @@ $grid-gutter: $layout-margin * .25;*/
   font-weight: bolder;
   border-radius: 3px;
 }
+.resto__container__card .info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 30%;
+  padding: 0px 20px 0 10px;
+}
+.resto__container__card .info a {
+  margin-top: 0px;
+}
 
+/*@function lightness-shift($colour) {
+    @if (lightness($colour) < 25%){
+        @return lighten($colour, 10%);
+    }@else{
+        @return darken($colour, 10%);
+    }
+}*/
+/*@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
+    text-shadow: $offset $offset $colour;
+}
+
+@mixin border($colour:$colour-primary) {
+    border: .1rem solid $colour;
+}
+
+@mixin img-ratio {
+    width: 100%;
+        display: block;
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+        }
+}
+
+@mixin btn {
+    padding: $grid-gutter;
+    @include border;
+    color: $colour-primary;
+    background: $colour-secondary;
+    cursor: pointer;
+    &:hover{
+        background: $colour-primary;
+        color: $colour-accent;
+    }
+    &--full-width {
+        width: 100%;
+        margin: 0 auto;
+    }
+}*/
+/*$colour-primary: #15DEA5;
+$colour-secondary: #001534;
+$colour-accent: #D6FFF5;
+$colour-white: #fff;
+$colour-invalid: #DB464B;
+
+$heading-shadow-size: .55rem;
+$layout-margin: 6rem;
+$grid-gutter: $layout-margin * .25;*/
+/*?*/
+/*darken($bg-color $30%);*/
+/*foncer la couleur pour la partie localisation*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -112,6 +253,7 @@ p {
   width: auto;
 }
 
+/*?*/
 /**********Header**********/
 header {
   display: flex;
@@ -176,7 +318,6 @@ header {
   border-radius: 40px;
   margin-top: 50px;
   cursor: pointer;
-  /*suffisant?*/
 }
 
 .explore > p {
