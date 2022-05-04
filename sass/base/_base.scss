@@ -1,18 +1,38 @@
-/**,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+body{
+    width: 400px;//pour voir la page dans l'inspecteur
+    margin:auto;
 }
 
-html {
-    // 10px div by def of 16px
-    font-size: 62.5%;
-}
-
-body {
+*
+{
     box-sizing: border-box;
-    background: $colour-secondary;
+    padding: 0;
+    margin: 0;
 }
-*/
+
+*a{
+    text-decoration: none;
+    color: black;
+}
+
+h2 h3 h4 p{
+     font-family: 'Shrikhand';
+}
+h2
+{
+    font-size: 27px;
+}
+h4{
+    font-size: 16px;
+}
+
+p{
+    
+    font-family:'roboto';
+}
+
+
+
+#bloc-page{
+   width:auto;
+}

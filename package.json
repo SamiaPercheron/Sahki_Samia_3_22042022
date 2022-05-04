@@ -4,16 +4,16 @@
   "description": "Oh my food",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/accueil.scss:./public/css/accueil.css  ./sass/restaurants.scss:./public/css/restaurants.css"
+    "sass": "sass --watch ./sass/accueil.scss:./public/css/accueil.css  ./sass/restaurants.scss:.public/css/restaurants.css"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/SamiaPercheron/Sahki_Samia_3_22042022"
   },
-  "author": "gerkx",
+  "author": "Sahki Samia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gerkx/maintainable-css-with-sass/issues"
-  },
-  "homepage": "https://github.com/gerkx/maintainable-css-with-sass#readme"
+      },
+  "homepage": ""
 }
+ 
