@@ -1,7 +1,47 @@
 @charset "UTF-8";
+/*@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
+    text-shadow: $offset $offset $colour;
+}
+
+@mixin border($colour:$colour-primary) {
+    border: .1rem solid $colour;
+}
+
+@mixin img-ratio {
+    width: 100%;
+        display: block;
+        overflow: hidden;
+        padding-top: 56.25%;
+        position: relative;
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+        }
+}
+
+@mixin btn {
+    padding: $grid-gutter;
+    @include border;
+    color: $colour-primary;
+    background: $colour-secondary;
+    cursor: pointer;
+    &:hover{
+        background: $colour-primary;
+        color: $colour-accent;
+    }
+    &--full-width {
+        width: 100%;
+        margin: 0 auto;
+    }
+}*/
 body {
-  width: 400px;
+  /* width: 400px;//pour voir la page dans l'inspecteur*/
   margin: auto;
+  font-family: "roboto", sans-serif;
+  width: 400px;
 }
 
 * {
@@ -10,7 +50,7 @@ body {
   margin: 0;
 }
 
-*a {
+* a {
   text-decoration: none;
   color: black;
 }
@@ -27,37 +67,69 @@ h4 {
   font-size: 16px;
 }
 
-p {
-  
-  font-family: "roboto";
-}
-
 #bloc-page {
   width: auto;
 }
 
-*/
+/*body {
+    font-family: 'Roboto', sans-serif;
+    color: $colour-primary;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.7;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    font-style: italic;
+}
+
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.75rem;*/
+h2 h3 h4 p {
+  font-family: h2 h3 h4 p roboto;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 19px;
+}
+
 header {
   /*à compiler*/
   display: flex;
   width: 100%;
   height: 65px;
-  position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
 
 .header__logo {
   display: flex;
+  flex-direction: row;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
-
 .header__logo img {
   width: 160px;
 }
 
+/**********Footer**********/
 footer {
   display: flex;
   flex-direction: column;
@@ -67,138 +139,40 @@ footer {
   padding: 20px 20px;
   background-color: rgba(0, 0, 0, 0.74);
 }
-
-/**********Section 1**********/
-.location {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  align-items: center;
-  background-color: rgba(128, 128, 128, 0.946);
-  height: 50px;
-}
-
-.location i {
-  font-size: 16px;
-}
-
-.location input {
-  border: none;
-  background-color: transparent;
-  font-size: 15px;
-  font-family: "roboto";
-}
-
-/**********Section 2**********/
-.top {
-  display: flex;
-  height: 290px;
-  align-items: center;
-  flex-direction: column;
-  padding: 45px 30px 45px 30px;
-  background-color: #f2f2f2;
-}
-
-.top__introduction {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.top__introduction h2 {
-  text-align: center;
-  font-weight: 900;
-}
-
-.top__introduction p {
-  font-size: 18px;
-  font-weight: 300;
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.top__explore {
-  display: flex;
-  align-items: center;
-  max-width: 250px;
-  height: 50px;
+footer > p {
+  font-size: 20px;
   color: white;
-  background: linear-gradient(360deg, #9356c0 2%, #ff79da 87%);
-  padding: 0px 0px;
-  border-radius: 40px;
-  padding: 0 20px 0 20px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+  font-family: "shrikhand", sans-serif;
+  margin-bottom: 8px;
 }
-
-/*************Section 3 function**********/
-.function {
+footer ul {
   display: flex;
   flex-direction: column;
-  height: 440px;
-  gap: 20px;
-  padding :50px 20px 40px 20px;
- 
+  gap: 5px;
 }
-
-.function__list {
-  align-items: center;
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.function__list li {
+footer ul a {
   display: flex;
   flex-direction: row;
-  border: 2px solid #f2f2f2;
-  width: 340px;
-  height: 75px;
-  justify-content: space-around;
-  align-items: center;
-  position: relative;
-  gap: 30px;
-  /*problème alignement icones et p */
-  background-color: #f2f2f2;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
-  padding: 40px 40px;
+  gap: 10px;
 }
-
-.function__list li p {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  margin-left: -340px;
-  border: 1px solid #9356dc;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  background-color: #9356dc;
+footer ul a i {
+  width: 15px;
+  font-size: 12px;
   color: white;
 }
-
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: grey;
-  font-size: 25px;
-  width: 50px;
-  height: 50px;
+footer ul a p {
+  color: white;
+  font-size: 16px;
 }
 
-/**********Restaurants**********/
+.footer__info {
+  list-style: none;
+}
+
+/*.btn {
+    @include btn
+}
+*/
 .resto {
   width: 100%;
   height: auto;
@@ -216,7 +190,6 @@ footer {
   height: 100%;
   gap: 20px;
 }
-
 .resto__container__container {
   display: flex;
   width: 100%;
@@ -230,6 +203,7 @@ footer {
   width: 100%;
   height: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
   border-radius: 15px;
   position: relative;
 }
@@ -240,6 +214,7 @@ footer {
   height: 70%;
   text-decoration: none;
 }
+
 .photo img {
   width: 100%;
   height: 100%;
@@ -247,8 +222,8 @@ footer {
   border-radius: 15px 15px 0 0;
 }
 
-.photo span {
-  color: #177d59;
+span {
+  color: rgb(23, 125, 89);
   position: absolute;
   top: 15px;
   right: 15px;
@@ -267,24 +242,160 @@ footer {
   justify-content: space-between;
   width: 100%;
   height: 30%;
-  padding-left: 15px;
 }
 
 .info a {
-  text-decoration: none;
-  color: black;
+  padding: 20px;
 }
 
-.coeur i {
+.info a p {
+  font-size: 16px;
+  /*ne fonctionne pas*/
+}
+
+.info a h3 {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.coeur {
+  padding: 20px;
+  cursor: pointer;
   font-size: 24px;
-  padding: 0 20px 0 20px; /*ajout d'un padding pour que le contour ne soit pas coupé à gauche*/
+}
+
+.coeur:hover i {
+  font-weight: bold;
+  background: linear-gradient(63deg, #ff79DA 0%, #9356DC 100%);
+  background-clip: content-box;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  /*limite le contour de la lettre*/
+  -webkit-text-fill-color: transparent;
+  /*ce qui dépasse est transparent*/
+}
+
+/**********Section 1**********/
+.location {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.946);
+  height: 50px;
+}
+.location i {
+  font-size: 16px;
+}
+.location input {
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  font-family: "roboto";
+  width: 120px;
+  /*cliquable */
+}
+
+/**********Section 2**********/
+.top {
+  display: flex;
+  height: 290px;
+  align-items: center;
+  flex-direction: column;
+  padding: 45px 30px 45px 30px;
+  background-color: #f2f2f2;
+}
+.top__introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.top__introduction h2 {
+  text-align: center;
+  font-weight: 900;
+}
+.top__introduction p {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.top__explore {
+  display: flex;
+  align-items: center;
+  max-width: 250px;
+  height: 50px;
+  color: white;
+  background: linear-gradient(360deg, rgb(147, 86, 192) 2%, rgb(255, 121, 218) 87%);
+  padding: 0px 0px;
+  border-radius: 40px;
+  padding: 0 20px 0 20px;
+  font-size: 16px;
+  border: none;
   cursor: pointer;
 }
 
-.coeur i:hover {
-  font-weight: bold;
-  background: linear-gradient(360deg, #9356c0 2%, #ff79da 87%);
-  background-clip: text;
-  -webkit-background-clip: text; /*limite le contour de la lettre*/
-  color: transparent;/*ce qui dépasse est transparent*/
+/*************Section 3 function**********/
+.function {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 70px;
 }
+.function__list {
+  align-items: center;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.function__list li {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #f2f2f2;
+  width: 340px;
+  height: 75px;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  gap: 30px;
+  /*problème alignement icones et p */
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  padding: 40px 40px;
+}
+.function__list li p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: -340px;
+  border: 1px solid #9356DC;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #9356DC;
+  color: white;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+/*# sourceMappingURL=accueil.css.map */

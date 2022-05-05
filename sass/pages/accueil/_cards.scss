@@ -70,9 +70,11 @@ span {
     justify-content: space-between;
     width: 100%;
     height: 30%;
-    padding: 0px 20px 0 10px;
+   
 }
-
+.info a{
+    padding: 20px;
+}
 .info a p {
     font-size: 16px;/*ne fonctionne pas*/
 }
@@ -82,14 +84,23 @@ span {
     font-weight:bolder;
 }
 
+.coeur{
+    padding: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
 
-.coeur i {
+.coeur:hover i {
     font-weight: bold;
-    background: linear-gradient(360deg, rgba(147, 86, 192, 1) 2%, rgba(255, 121, 218, 1) 87%);
-    ;
+    background: linear-gradient(63deg, $colour-secondary 0%, $colour-primary 100%);
+        background-clip: content-box;
+        -moz-background-clip: text;
+ 
+   
 
     -webkit-background-clip: text;
     /*limite le contour de la lettre*/
     -webkit-text-fill-color: transparent;
     /*ce qui dépasse est transparent*/
 }
+
