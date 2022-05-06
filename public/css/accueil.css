@@ -137,7 +137,7 @@ footer {
   height: 195px;
   gap: 10px;
   padding: 20px 20px;
-  background-color: rgba(0, 0, 0, 0.74);
+  background-color: #353535;
 }
 footer > p {
   font-size: 20px;
@@ -169,10 +169,21 @@ footer ul a p {
   list-style: none;
 }
 
-/*.btn {
-    @include btn
+.button {
+  display: flex;
+  align-items: center;
+  max-width: 250px;
+  height: 50px;
+  color: white;
+  background: linear-gradient(360deg, rgb(147, 86, 192) 2%, rgb(255, 121, 218) 87%);
+  padding: 0px 0px;
+  border-radius: 40px;
+  padding: 0 20px 0 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
-*/
+
 .resto {
   width: 100%;
   height: auto;
@@ -321,20 +332,6 @@ span {
   font-weight: 300;
   text-align: center;
   margin-bottom: 32px;
-}
-.top__explore {
-  display: flex;
-  align-items: center;
-  max-width: 250px;
-  height: 50px;
-  color: white;
-  background: linear-gradient(360deg, rgb(147, 86, 192) 2%, rgb(255, 121, 218) 87%);
-  padding: 0px 0px;
-  border-radius: 40px;
-  padding: 0 20px 0 20px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
 }
 
 /*************Section 3 function**********/

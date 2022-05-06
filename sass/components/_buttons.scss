@@ -1,4 +1,14 @@
-/*.btn {
-    @include btn
+.button {
+    display: flex;
+    align-items: center;
+    max-width: 250px;
+    height: 50px;
+    color: white;
+    background: linear-gradient(360deg, rgba(147, 86, 192, 1) 2%, rgba(255, 121, 218, 1) 87%);
+    padding: 0px 0px;
+    border-radius: 40px;
+    padding: 0 20px 0 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
-*/
