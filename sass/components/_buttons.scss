@@ -12,3 +12,9 @@
     border: none;
     cursor: pointer;
 }
+
+.button:hover {
+    background: $clear-radient-bg;
+    box-shadow: $box-shadow;
+    transition-duration: 500ms;
+}

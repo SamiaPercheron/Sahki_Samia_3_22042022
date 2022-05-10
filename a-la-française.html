@@ -16,29 +16,32 @@
 </head>
 
 <body>
-    <main id="bloc-page">
+    <!--********** Header **********-->
+    <header>
+        <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
+        <div class="header__logo">
+            <img src="./public/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+        </div>
+    </header>
 
-        <!--********** Header **********-->
-        <header>
-            <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
-            <div class="header__logo">
-                <img src="./public/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
-            </div>
-        </header>
+
+
+    <main id="bloc-page">
 
         <!--**********Image**********-->
         <div class="picture">
             <img src="./public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant à la française">
-        </div>
-
-        <!--**********Section restaurant**********-->
-        <section class="restaurant">
             <div class="title">
                 <h2>À la française</h2>
                 <div class="heart">
                     <i class="fa-regular fa-heart "></i>
                 </div>
             </div>
+        </div>
+
+        <!--**********Section restaurant**********-->
+        <section class="restaurant">
+
 
             <div class="menu">
                 <!--Entrées-->
@@ -50,12 +53,13 @@
                         <li class="dish">
                             <div class="dish__info">
                                 <h3>Tartare de poulpe acidulé</h3>
-                                <p>Aux zests d'orange</p>
+                                <div class="dish__info__add">
+                                    <p>Aux zests d'orange</p>
+                                    <p class="price">25€</p>
+                                </div>
                             </div>
-                            <div class="price">
-                                <p>25€</p>
-                            </div>
-                            <span><i class="fas fa-check-circle carte__menu__plat__cache--check"></i></span>
+                            <div class="check"><span><i
+                                        class="fas fa-check-circle carte__menu__plat__cache--check"></i></span></div>
                         </li>
                         <li class="dish">
                             <div class="dish__info">

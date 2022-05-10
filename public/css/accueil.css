@@ -145,7 +145,7 @@ header {
   width: 100%;
   height: 65px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  position: relative;
 }
 
 .header__logo {
@@ -216,13 +216,19 @@ footer ul a p {
   cursor: pointer;
 }
 
+.button:hover {
+  background: linear-gradient(360deg, rgb(147, 86, 192) 5%, rgb(255, 121, 218) 75%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition-duration: 500ms;
+}
+
 .resto {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: #f2f2f2;
+  background-color: #F6F6F6;
   padding: 60px 20px 60px 20px;
 }
 
@@ -326,7 +332,7 @@ span {
   align-items: center;
   height: 50px;
   gap: 10px;
-  background-color: #a6a6a6;
+  background-color: #EAEAEA;
 }
 .location i {
   font-size: 16px;
@@ -338,10 +344,6 @@ span {
   width: 120px;
   /*cliquable */
 }
-.location input .placeholder {
-  color: black;
-  /*comment foncer le texte belleville*/
-}
 
 /**********Section 2**********/
 .top {
@@ -350,7 +352,7 @@ span {
   height: 290px;
   align-items: center;
   padding: 45px 30px 45px 30px;
-  background-color: #f2f2f2;
+  background-color: #F6F6F6;
 }
 .top__introduction {
   display: flex;
@@ -393,16 +395,14 @@ span {
   flex-direction: row;
   width: 340px;
   height: 75px;
-  justify-content: space-around;
   align-items: center;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #F6F6F6;
   position: relative;
   gap: 30px;
   /*problème alignement icones et p */
-  background-color: #f2f2f2;
+  background-color: #F6F6F6;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 25px;
-  padding: 40px 40px;
 }
 .function__list li p {
   font-size: 16px;
@@ -417,8 +417,7 @@ span {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  position: absolute;
-  margin-left: -340px;
+  margin-left: -15px;
   border: 1px solid #9356DC;
   background-color: #9356DC;
   color: #f0f0f0;
