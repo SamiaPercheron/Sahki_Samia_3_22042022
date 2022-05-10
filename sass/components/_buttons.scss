@@ -3,10 +3,10 @@
     align-items: center;
     max-width: 250px;
     height: 50px;
-    color: white;
-    background: linear-gradient(360deg, rgba(147, 86, 192, 1) 2%, rgba(255, 121, 218, 1) 87%);
+    color: $btn-txt-color;
+    background: $radient-bg;
     padding: 0px 0px;
-    border-radius: 40px;
+    border-radius: $btn-border-radius;
     padding: 0 20px 0 20px;
     font-size: 16px;
     border: none;

@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/*Police*/
+/*Couleurs principales*/
+/*Nuances de gris*/
+/*Bouton*/
+/*Dégradé de clouleur*/
+/*Cartes*/
+/*Ombre*/
+/*Icônes*/
+/*Numéros*/
+/*Footer*/
 /*@mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
     text-shadow: $offset $offset $colour;
 }
@@ -22,7 +32,7 @@
         }
 }
 
-@mixin btn {
+exemples @mixin btn {
     padding: $grid-gutter;
     @include border;
     color: $colour-primary;
@@ -37,6 +47,31 @@
         margin: 0 auto;
     }
 }*/
+/*@mixin btn*/
+/*.button {
+    display: flex;
+    align-items: center;
+    max-width: 250px;
+    height: 50px;
+    color: white;
+    background: $radient-bg-button;
+    padding: 0px 0px;
+    border-radius: 40px;
+    padding: 0 20px 0 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}*/
+/*Reset*/
+/*Disposition*/
+/*Coeur*/
+/*Nombre*/
+/*Icône*/
+#bloc-page {
+  width: 100%;
+  margin: auto;
+}
+
 body {
   /* width: 400px;//pour voir la page dans l'inspecteur*/
   margin: auto;
@@ -50,25 +85,16 @@ body {
   margin: 0;
 }
 
-* a {
-  text-decoration: none;
-  color: black;
-}
-
-h2 h3 h4 p {
-  font-family: "Shrikhand";
-}
-
 h2 {
   font-size: 27px;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
-#bloc-page {
-  width: auto;
+p {
+  font-size: 19px;
 }
 
 /*body {
@@ -109,8 +135,12 @@ p {
   font-size: 19px;
 }
 
+* a {
+  text-decoration: none;
+  color: black;
+}
+
 header {
-  /*à compiler*/
   display: flex;
   width: 100%;
   height: 65px;
@@ -121,9 +151,9 @@ header {
 .header__logo {
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .header__logo img {
   width: 160px;
@@ -141,7 +171,7 @@ footer {
 }
 footer > p {
   font-size: 20px;
-  color: white;
+  color: #f0f0f0;
   font-family: "shrikhand", sans-serif;
   margin-bottom: 8px;
 }
@@ -158,14 +188,16 @@ footer ul a {
 footer ul a i {
   width: 15px;
   font-size: 12px;
-  color: white;
+  color: #f0f0f0;
 }
 footer ul a p {
-  color: white;
+  color: #f0f0f0;
   font-size: 16px;
 }
 
 .footer__info {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -174,7 +206,7 @@ footer ul a p {
   align-items: center;
   max-width: 250px;
   height: 50px;
-  color: white;
+  color: #f0f0f0;
   background: linear-gradient(360deg, rgb(147, 86, 192) 2%, rgb(255, 121, 218) 87%);
   padding: 0px 0px;
   border-radius: 40px;
@@ -203,20 +235,20 @@ footer ul a p {
 }
 .resto__container__container {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  flex-direction: column;
   gap: 20px;
 }
 
 .resto__container__card {
-  background-color: white;
   width: 100%;
   height: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 15px;
   position: relative;
+  background-color: #f0f0f0;
 }
 
 .photo {
@@ -234,12 +266,12 @@ footer ul a p {
 }
 
 span {
-  color: rgb(23, 125, 89);
+  color: #278870;
   position: absolute;
   top: 15px;
   right: 15px;
-  border: 1px solid #99e2d0;
-  background-color: #99e2d0;
+  border: 1px solid #99e2D0;
+  background-color: #99e2D0;
   padding: 6px 10px;
   font-size: 17px;
   font-weight: bolder;
@@ -269,15 +301,15 @@ span {
   font-weight: bolder;
 }
 
-.coeur {
-  padding: 20px;
-  cursor: pointer;
+.heart {
   font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.coeur:hover i {
+.heart:hover i {
   font-weight: bold;
-  background: linear-gradient(63deg, #ff79DA 0%, #9356DC 100%);
+  background: linear-gradient(360deg, rgb(147, 86, 192) 2%, rgb(255, 121, 218) 87%);
   background-clip: content-box;
   -moz-background-clip: text;
   -webkit-background-clip: text;
@@ -289,11 +321,12 @@ span {
 /**********Section 1**********/
 .location {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 10px;
   align-items: center;
-  background-color: rgba(128, 128, 128, 0.946);
   height: 50px;
+  gap: 10px;
+  background-color: #a6a6a6;
 }
 .location i {
   font-size: 16px;
@@ -302,17 +335,20 @@ span {
   border: none;
   background-color: transparent;
   font-size: 15px;
-  font-family: "roboto";
   width: 120px;
   /*cliquable */
+}
+.location input .placeholder {
+  color: black;
+  /*comment foncer le texte belleville*/
 }
 
 /**********Section 2**********/
 .top {
   display: flex;
+  flex-direction: column;
   height: 290px;
   align-items: center;
-  flex-direction: column;
   padding: 45px 30px 45px 30px;
   background-color: #f2f2f2;
 }
@@ -344,20 +380,22 @@ span {
   padding-bottom: 70px;
 }
 .function__list {
-  align-items: center;
-  list-style-type: none;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
   gap: 20px;
 }
 .function__list li {
   display: flex;
   flex-direction: row;
-  border: 2px solid #f2f2f2;
   width: 340px;
   height: 75px;
   justify-content: space-around;
   align-items: center;
+  border: 2px solid #f2f2f2;
   position: relative;
   gap: 30px;
   /*problème alignement icones et p */
@@ -373,26 +411,31 @@ span {
 
 .number {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   position: absolute;
   margin-left: -340px;
   border: 1px solid #9356DC;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
   background-color: #9356DC;
-  color: white;
+  color: #f0f0f0;
 }
 
 .icon {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  color: grey;
-  font-size: 25px;
+  align-items: center;
   width: 50px;
   height: 50px;
+  color: #808080;
+  font-size: 25px;
+}
+.icon :hover {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=accueil.css.map */

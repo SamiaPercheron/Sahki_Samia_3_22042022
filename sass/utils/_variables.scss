@@ -1,6 +1,30 @@
-$colour-primary:#9356DC;
-$colour-secondary:#ff79DA;
-$colour-tertiary:#99e2D0;
+/*Police*/
+$logo-title-font-fa: 'shrikhand', sans-serif;
+$txt-font-fa: 'roboto', sans-serif;
+/*Couleurs principales*/
+$colour-primary: #9356DC;
+$colour-secondary: #ff79DA;
+$colour-tertiary: #99e2D0;
+$main-txt-color: #000000;
+/*Nuances de gris*/
 $bg-color: #f2f2f2;
-$white: white;
-
+$bg-darken-color: darken($bg-color, 30%);
+/*Bouton*/
+$btn-border-radius: 40px;
+$btn-txt-color: #f0f0f0;
+/*Dégradé de clouleur*/
+$radient-bg :linear-gradient(360deg, rgba(147, 86, 192, 1) 2%, rgba(255, 121, 218, 1) 87%);
+/*Cartes*/
+$cards-bg: #f0f0f0;
+$cards-border-radius: 15px;
+$tagcard-darken-color: darken( $colour-tertiary, 40%);
+/*Ombre*/
+$box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+/*Icônes*/
+$icon-color: #808080;
+$icon-hover-color: $colour-primary;
+/*Numéros*/
+$number-color: #f0f0f0;
+/*Footer*/
+$txt-color-footer: #f0f0f0;
+$footer-bg: #353535;

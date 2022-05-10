@@ -1,38 +1,34 @@
-
 .resto {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
+    @include vertical-display;
     gap: 20px;
-    background-color: #f2f2f2;
+    background-color: $bg-color;
     padding: 60px 20px 60px 20px;
 }
 
 .resto__container {
-    display: flex;
-    flex-direction: column;
+    @include vertical-display;
     width: 100%;
     height: 100%;
     gap: 20px;
 
     &__container {
-        display: flex;
+        @include vertical-display ;
         width: 100%;
         height: 100%;
-        flex-direction: column;
         gap: 20px;
     }
 }
 
 .resto__container__card {
-    background-color: white;
     width: 100%;
     height: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: $box-shadow;
     transition: 0.3s;
-    border-radius: 15px;
+    border-radius: $cards-border-radius;
     position: relative;
+    background-color:$cards-bg;
 }
 
 .photo {
@@ -42,7 +38,7 @@
     text-decoration: none;
 }
 
-.photo img{
+.photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -50,12 +46,12 @@
 }
 
 span {
-    color: rgb(23, 125, 89);
+    color: $tagcard-darken-color;
     position: absolute;
     top: 15px;
     right: 15px;
-    border: 1px solid #99e2d0;
-    background-color: #99e2d0;
+    border: 1px solid $colour-tertiary ;
+    background-color: $colour-tertiary;
     padding: 6px 10px;
     font-size: 17px;
     font-weight: bolder;
@@ -64,43 +60,32 @@ span {
 
 
 .info {
-    display: flex;
-    flex-direction: row;
+    @include row-display;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 30%;
-   
+
 }
-.info a{
+
+.info a {
     padding: 20px;
 }
+
 .info a p {
-    font-size: 16px;/*ne fonctionne pas*/
+    font-size: 16px;
+    /*ne fonctionne pas*/
 }
-.info a h3
-{
+
+.info a h3 {
     font-size: 20px;
-    font-weight:bolder;
+    font-weight: bolder;
 }
 
-.coeur{
-    padding: 20px;
-    cursor: pointer;
-    font-size: 24px;
+.heart {
+   @include heart-style;
 }
 
-.coeur:hover i {
-    font-weight: bold;
-    background: linear-gradient(63deg, $colour-secondary 0%, $colour-primary 100%);
-        background-clip: content-box;
-        -moz-background-clip: text;
- 
-   
-
-    -webkit-background-clip: text;
-    /*limite le contour de la lettre*/
-    -webkit-text-fill-color: transparent;
-    /*ce qui dépasse est transparent*/
+.heart:hover i {
+   @include heart-hover;
 }
-

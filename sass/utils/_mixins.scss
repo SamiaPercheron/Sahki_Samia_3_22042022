@@ -21,7 +21,7 @@
         }
 }
 
-@mixin btn {
+exemples @mixin btn {
     padding: $grid-gutter;
     @include border;
     color: $colour-primary;
@@ -36,3 +36,84 @@
         margin: 0 auto;
     }
 }*/
+/*@mixin btn*/
+
+
+/*.button {
+    display: flex;
+    align-items: center;
+    max-width: 250px;
+    height: 50px;
+    color: white;
+    background: $radient-bg-button;
+    padding: 0px 0px;
+    border-radius: 40px;
+    padding: 0 20px 0 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}*/
+/*Reset*/
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*Disposition*/
+@mixin vertical-display {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin row-display {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin center-elements {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin vertical-center-position {
+    @include vertical-display;
+    @include center-elements;
+}
+
+@mixin horizontal-center-position {
+    @include row-display;
+    @include center-elements;
+}
+/*Coeur*/
+@mixin heart-style
+{
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@mixin heart-hover {
+    font-weight: bold;
+    background: $radient-bg;
+    background-clip: content-box;
+    -moz-background-clip: text;
+
+    -webkit-background-clip: text;
+    /*limite le contour de la lettre*/
+    -webkit-text-fill-color: transparent;
+    /*ce qui dépasse est transparent*/
+}
+/*Nombre*/
+@mixin number-circle
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+}
+/*Icône*/
+@mixin icon-size
+{
+    width: 50px;
+    height: 50px;
+}

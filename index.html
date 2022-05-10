@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./public/css/accueil.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"
@@ -30,12 +30,13 @@
         </header>
 
         <!--**********Section 1 : location **********-->
-        <section class="location"> <!--cliquable ?erreur w3c-->
-            
-                <label for="city"><i class="fa-solid fa-location-dot icone"></i></label>
-                <input id="city" type="text" placeholder="Paris, Belleville">
-            
-        </section>
+        <div class="location">
+            <!--cliquable ?erreur w3c-->
+
+            <label for="city"><i class="fa-solid fa-location-dot icone"></i></label>
+            <input id="city" type="text" placeholder="Paris, Belleville">
+
+        </div>
 
         <!--**********Section 2 : introduction**********-->
         <section class="top">
@@ -52,9 +53,11 @@
                 <h2>Fonctionnement</h2>
             </div>
             <ul class="function__list">
-                <li class="function__steps__frame"><!--liste avec hover-->
+                <li class="function__steps__frame">
+                    <!--liste avec hover-->
                     <p class="number">1</p>
-                    <div class="icon"><i class="fas fa-mobile-alt"></i></div> <!--avec hover-->
+                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <!--avec hover-->
                     <p class="font">Choisissez un restaurant</p>
                 </li>
                 <li class="function__steps__frame">
@@ -71,11 +74,13 @@
         </section>
 
         <!--**********Section 4:Restaurants **********-->
-        <section class="resto"> <!--ancre?-->
-            <h2 class="resto__title">Restaurants</h2> <!--figure-->
+        <section class="resto">
+            <!--ancre?-->
+            <h2 class="resto__title">Restaurants</h2>
+            <!--figure-->
             <div class="resto__container">
                 <div class="resto__container__card">
-                    <a href="./la palette-du-gout.html" class="photo">
+                    <a href="./la-palette-du-gout.html" class="photo">
                         <img src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                             alt="La palette du goût">
                         <span>Nouveau</span>
@@ -85,7 +90,7 @@
                             <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </a>
-                        <div class="coeur">
+                        <div class="heart">
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </div>
@@ -100,7 +105,7 @@
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
                         </a>
-                        <div class="coeur">
+                        <div class="heart">
                             <i class="fa-regular fa-heart "></i>
                         </div>
                     </div>
@@ -114,7 +119,7 @@
                             <h3>À la française</h3>
                             <p>Cité Rouge</p>
                         </a>
-                        <div class="coeur">
+                        <div class="heart">
                             <i class="fa-regular fa-heart "></i>
                         </div>
                     </div>
@@ -124,12 +129,12 @@
                         <img src="./public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                             alt="Le délice des sens">
                     </a>
-                    <div class="info"> 
+                    <div class="info">
                         <a href="./le-delice-des-sens.html">
                             <h3>Le délice des sens</h3>
                             <p>Folie-Méricourt</p>
                         </a>
-                        <div class="coeur">
+                        <div class="heart">
                             <i class="fa-regular fa-heart "></i>
                         </div>
                     </div>
