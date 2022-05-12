@@ -14,7 +14,7 @@
 }
 
 .button:hover {
-    background: $clear-radient-bg;
+    filter: brightness(110%);
     box-shadow: $box-shadow;
-    transition-duration: 500ms;
+    transition: 400ms ease-in-out;
 }

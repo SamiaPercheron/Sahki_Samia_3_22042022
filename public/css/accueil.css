@@ -67,18 +67,30 @@ exemples @mixin btn {
 /*Coeur*/
 /*Nombre*/
 /*Icône*/
+@keyframes rotation {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 #bloc-page {
   width: 100%;
   margin: auto;
 }
 
 body {
-  /* width: 400px;//pour voir la page dans l'inspecteur*/
-  margin: auto;
-  font-family: "roboto", sans-serif;
-  width: 400px;
+  margin: 0;
+  min-height: 100vh;
 }
 
+/*body {
+
+    margin: auto;
+    font-family: $txt-font-fa;
+    width: 400px;
+*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -168,6 +180,7 @@ footer {
   gap: 10px;
   padding: 20px 20px;
   background-color: #353535;
+  position: static;
 }
 footer > p {
   font-size: 20px;
@@ -207,7 +220,7 @@ footer ul a p {
   max-width: 250px;
   height: 50px;
   color: #f0f0f0;
-  background: linear-gradient(360deg, rgb(147, 86, 192) 2%, rgb(255, 121, 218) 87%);
+  background: linear-gradient(357deg, rgb(169, 93, 220) 2%, rgb(255, 121, 218) 91%);
   padding: 0px 0px;
   border-radius: 40px;
   padding: 0 20px 0 20px;
@@ -217,9 +230,9 @@ footer ul a p {
 }
 
 .button:hover {
-  background: linear-gradient(360deg, rgb(147, 86, 192) 5%, rgb(255, 121, 218) 75%);
+  filter: brightness(110%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition-duration: 500ms;
+  transition: 400ms ease-in-out;
 }
 
 .resto {
@@ -315,13 +328,14 @@ span {
 
 .heart:hover i {
   font-weight: bold;
-  background: linear-gradient(360deg, rgb(147, 86, 192) 2%, rgb(255, 121, 218) 87%);
+  background: linear-gradient(357deg, rgb(169, 93, 220) 2%, rgb(255, 121, 218) 91%);
   background-clip: content-box;
   -moz-background-clip: text;
   -webkit-background-clip: text;
   /*limite le contour de la lettre*/
   -webkit-text-fill-color: transparent;
   /*ce qui dépasse est transparent*/
+  transition: 400ms ease-in-out;
 }
 
 /**********Section 1**********/

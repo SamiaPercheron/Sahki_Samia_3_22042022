@@ -102,6 +102,7 @@ exemples @mixin btn {
     /*limite le contour de la lettre*/
     -webkit-text-fill-color: transparent;
     /*ce qui dépasse est transparent*/
+    transition: 400ms ease-in-out;
 }
 /*Nombre*/
 @mixin number-circle
