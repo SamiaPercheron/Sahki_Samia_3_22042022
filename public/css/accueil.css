@@ -94,6 +94,7 @@ exemples @mixin btn {
 
 h2 {
   font-size: 27px;
+  color: black;
 }
 
 h4 {
@@ -131,7 +132,7 @@ button {
     font-style: italic;
     font-size: 2.75rem;*/
 h2 h3 h4 p {
-  font-family: h2 h3 h4 p roboto;
+  font-family: "roboto", sans-serif;
 }
 
 h4 {

@@ -94,6 +94,7 @@ exemples @mixin btn {
 
 h2 {
   font-size: 27px;
+  color: black;
 }
 
 h4 {
@@ -131,7 +132,7 @@ button {
     font-style: italic;
     font-size: 2.75rem;*/
 h2 h3 h4 p {
-  font-family: h2 h3 h4 p roboto;
+  font-family: "roboto", sans-serif;
 }
 
 h4 {
@@ -321,13 +322,12 @@ header i {
   gap: 20px;
 }
 .menu__kind__submenu {
-  padding: 0 10px 0 10px;
-}
-.menu__kind__submenu h2 {
-  text-transform: uppercase;
-  /*à vérifier avec les animations*/
-  font-size: 18px;
-  font-weight: 300;
+  margin: 0 10px 0px 10px;
+  padding-bottom: 4px;
+  border-bottom: solid;
+  width: 50px;
+  color: #99e2D0;
+  border-bottom-width: 3.5px;
 }
 .menu__kind__container {
   display: flex;
@@ -336,6 +336,12 @@ header i {
   padding: 0;
   list-style: none;
   gap: 20px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 22px;
 }
 
 .dish {

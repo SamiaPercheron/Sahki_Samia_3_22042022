@@ -97,14 +97,14 @@ header i {
   gap: 20px;
 
   &__submenu {
-    padding: 0 10px 0 10px;
+    margin: 0 10px 0px 10px;
+    padding-bottom: 4px;
+    border-bottom: solid;
+    width: 50px;
+    color: $colour-tertiary;
+   border-bottom-width: 3.5px;
 
-    h2 {
-      text-transform: uppercase;
-      /*à vérifier avec les animations*/
-      font-size: 18px;
-      font-weight: 300;
-    }
+    
   }
 
   &__container {
@@ -114,7 +114,13 @@ header i {
    
   }
 }
+.uppercase
+{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 22px;
 
+}
 .dish {
     display: flex;
     //width: 360px;
