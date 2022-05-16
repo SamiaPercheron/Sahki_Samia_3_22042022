@@ -141,13 +141,15 @@ header i {
 
     p {
       font-weight: 400;
-      font-size: 17px;
+      font-size: 19px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
   }
 }
+
+/*Animation prix*/
 .dish:hover
 {
     .check{
@@ -155,22 +157,8 @@ header i {
     }
     i 
     {
-        animation: rotation 400ms ease-in-out;
+        animation: rotation 500ms ease-in-out;
     };
-}
-.check {
-  background-color: $colour-tertiary;
-  margin-right: -60px;
-  width: 60px;
-  transition: 300ms ease-in-out;
-  display: flex;
-  align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-i {
-    color: white;
-}
-
 }
 
 .price {
@@ -179,6 +167,23 @@ i {
   margin-left: auto;
   padding: 10px;
 }
+
+.check {
+  background-color: $colour-tertiary;
+  margin-right: -60px;
+  width: 60px;
+  transition: 400ms ease-in-out;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+i {
+    color: white;
+    font-size: 20px;
+}
+
+}
+
 
 .order {
   @include row-display;
@@ -193,6 +198,7 @@ i {
 
 }
 
+/*Bouton commander*/
 .button:hover {
   filter:brightness(110%);
   box-shadow: $box-shadow;

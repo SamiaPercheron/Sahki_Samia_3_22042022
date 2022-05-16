@@ -20,7 +20,10 @@ $cards-bg: #f0f0f0;
 $cards-border-radius: 15px;
 $tagcard-darken-color: darken($colour-tertiary, 40%);
 /*Ombre*/
-$box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+$box-shadow : 6px 6px 9px 0px rgba(0,0,0,0.1);
+
+//0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 /*Icônes*/
 $icon-color: #808080;
 $icon-hover-color: $colour-primary;
@@ -29,3 +32,4 @@ $number-color: #f0f0f0;
 /*Footer*/
 $txt-color-footer: #f0f0f0;
 $footer-bg: #353535;
+

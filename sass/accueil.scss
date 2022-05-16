@@ -17,7 +17,6 @@
 
 
 
-
 /**********Section 1**********/
 .location
 
@@ -39,7 +38,7 @@
         width: 120px;
 
         /*cliquable */
-       
+
     }
 }
 
@@ -73,37 +72,47 @@
 /*************Section 3 function**********/
 .function {
     @include vertical-display;
-    height: 500px;
+    width: 100%;
+    height: auto;
     gap: 20px;
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding: 45px 30px 55px 30px;
+    align-items: center;
+   
+
 
     &__list {
         @include vertical-display;
         @include reset-list;
-        align-items: center;
+        width: 100%;
         gap: 20px;
 
         li {
             @include row-display;
-            width: 340px;
-            height: 75px;
+            width: auto;
+            height: 70px;
             align-items: center;
             border: 2px solid $bg-top;
             position: relative;
             gap: 30px;
             /*problème alignement icones et p */
-            background-color: $bg-top;
+            background-color: white;
             box-shadow: $box-shadow;
             border-radius: 25px;
-
+            
+        
             p {
-                font-size: 16px;
-                font-weight: bold;
+                font-size: 17px;
+                font-weight: 500;
+                font-family: roboto;
+              
             }
+
         }
+        //li :hover violet clair
+        
     }
 }
+
 
 .number {
     @include horizontal-center-position;
@@ -119,7 +128,7 @@
     @include horizontal-center-position;
     @include icon-size;
     color: $icon-color;
-    font-size: 25px;
+    font-size: 19px;
 
 
     :hover {
