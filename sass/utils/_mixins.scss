@@ -97,14 +97,13 @@ exemples @mixin btn {
     background: $radient-bg;
     background-clip: content-box;
     -moz-background-clip: text;
-
     -webkit-background-clip: text;
     /*limite le contour de la lettre*/
     -webkit-text-fill-color: transparent;
     /*ce qui dépasse est transparent*/
     transition: 400ms ease-in-out;
 }
-/*Nombre*/
+/*Nombres*/
 @mixin number-circle
 {
     width: 25px;
