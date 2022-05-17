@@ -77,7 +77,7 @@
     gap: 20px;
     padding: 45px 30px 55px 30px;
     align-items: center;
-   
+
 
 
     &__list {
@@ -98,18 +98,19 @@
             background-color: white;
             box-shadow: $box-shadow;
             border-radius: 25px;
-            
-        
+
+
             p {
                 font-size: 17px;
                 font-weight: 500;
                 font-family: roboto;
-              
+
             }
 
         }
+
         //li :hover violet clair
-        
+
     }
 }
 
