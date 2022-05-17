@@ -45,7 +45,7 @@
 /**********Section 2**********/
 .top {
     @include vertical-display;
-    height: 290px;
+    height: 270px;
     align-items: center;
     padding: 45px 30px 45px 30px;
     background-color: $bg-top;
@@ -55,12 +55,13 @@
         gap: 10px;
 
         h2 {
+            font-size: 20px;
             text-align: center;
             font-weight: 900;
         }
 
         p {
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 300;
             text-align: center;
             margin-bottom: 32px;
@@ -75,7 +76,7 @@
     width: 100%;
     height: auto;
     gap: 20px;
-    padding: 45px 30px 55px 30px;
+    padding: 45px 20px 55px 20px;
     align-items: center;
 
 
@@ -93,7 +94,7 @@
             align-items: center;
             border: 2px solid $bg-top;
             position: relative;
-            gap: 30px;
+            gap: 20px;
             /*problème alignement icones et p */
             background-color: white;
             box-shadow: $box-shadow;
@@ -101,8 +102,8 @@
 
 
             p {
-                font-size: 17px;
-                font-weight: 500;
+             
+                font-weight: 700;
                 font-family: roboto;
 
             }
@@ -118,7 +119,7 @@
 .number {
     @include horizontal-center-position;
     @include number-circle;
-
+    font-size: 13px;
     margin-left: -15px;
     border: 1px solid $colour-primary;
     background-color: $colour-primary;
@@ -127,9 +128,8 @@
 
 .icon {
     @include horizontal-center-position;
-    @include icon-size;
     color: $icon-color;
-    font-size: 19px;
+    font-size: 17px;
 
 
     :hover {

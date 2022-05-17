@@ -66,7 +66,6 @@ exemples @mixin btn {
 /*Disposition*/
 /*Coeur*/
 /*Nombres*/
-/*Icône*/
 @keyframes rotation {
   0% {
     transform: rotate(-360deg);
@@ -93,8 +92,12 @@ exemples @mixin btn {
 }
 
 h2 {
-  font-size: 27px;
+  font-size: 19px;
   color: black;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 h4 {
@@ -102,7 +105,7 @@ h4 {
 }
 
 p {
-  font-size: 19px;
+  font-size: 15px;
 }
 
 /*body {
@@ -351,7 +354,7 @@ span {
 .top {
   display: flex;
   flex-direction: column;
-  height: 290px;
+  height: 270px;
   align-items: center;
   padding: 45px 30px 45px 30px;
   background-color: #F6F6F6;
@@ -364,11 +367,12 @@ span {
   gap: 10px;
 }
 .top__introduction h2 {
+  font-size: 20px;
   text-align: center;
   font-weight: 900;
 }
 .top__introduction p {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 300;
   text-align: center;
   margin-bottom: 32px;
@@ -381,7 +385,7 @@ span {
   width: 100%;
   height: auto;
   gap: 20px;
-  padding: 45px 30px 55px 30px;
+  padding: 45px 20px 55px 20px;
   align-items: center;
 }
 .function__list {
@@ -401,15 +405,14 @@ span {
   align-items: center;
   border: 2px solid #F6F6F6;
   position: relative;
-  gap: 30px;
+  gap: 20px;
   /*problème alignement icones et p */
   background-color: white;
   box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
 }
 .function__list li p {
-  font-size: 17px;
-  font-weight: 500;
+  font-weight: 700;
   font-family: roboto;
 }
 
@@ -421,6 +424,7 @@ span {
   width: 25px;
   height: 25px;
   border-radius: 50%;
+  font-size: 13px;
   margin-left: -15px;
   border: 1px solid #9356DC;
   background-color: #9356DC;
@@ -432,10 +436,8 @@ span {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
   color: #808080;
-  font-size: 19px;
+  font-size: 17px;
 }
 .icon :hover {
   color: #9356DC;
