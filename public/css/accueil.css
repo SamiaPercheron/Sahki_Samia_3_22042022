@@ -5,6 +5,7 @@
 /*Bouton*/
 /*Dégradé de clouleur*/
 /*Cartes*/
+/*à supprimer ?*/
 /*Ombre*/
 /*Icônes*/
 /*Numéros*/
@@ -171,7 +172,6 @@ footer {
   gap: 10px;
   padding: 20px 20px;
   background-color: #353535;
-  position: static;
 }
 footer > p {
   font-size: 20px;
@@ -329,6 +329,54 @@ span {
   transition: 400ms ease-in-out;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent 40%, #9356dc, #ff79da);
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+.loading::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: white;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(45deg, transparent, transparent 40%, #9356dc, #ff79da);
+  border-radius: 50%;
+  z-index: 1000;
+  z-index: 1;
+  filter: blur(30px);
+}
+
 /**********Section 1**********/
 .location {
   display: flex;
@@ -347,7 +395,7 @@ span {
   background-color: transparent;
   font-size: 15px;
   width: 120px;
-  /*cliquable */
+  /*cliquable ? */
 }
 
 /**********Section 2**********/
@@ -416,6 +464,7 @@ span {
   font-family: roboto;
 }
 
+/*Nombres*/
 .number {
   display: flex;
   flex-direction: row;
@@ -431,6 +480,7 @@ span {
   color: #f0f0f0;
 }
 
+/*Icônes*/
 .icon {
   display: flex;
   flex-direction: row;

@@ -5,6 +5,7 @@
 /*Bouton*/
 /*Dégradé de clouleur*/
 /*Cartes*/
+/*à supprimer ?*/
 /*Ombre*/
 /*Icônes*/
 /*Numéros*/
@@ -171,7 +172,6 @@ footer {
   gap: 10px;
   padding: 20px 20px;
   background-color: #353535;
-  position: static;
 }
 footer > p {
   font-size: 20px;
@@ -369,7 +369,7 @@ header i {
   white-space: nowrap;
 }
 
-/*Animation prix*/
+/*Animation prix et check*/
 .dish:hover .check {
   margin-right: 0;
 }
@@ -401,6 +401,7 @@ header i {
   font-size: 20px;
 }
 
+/*Bouton commander*/
 .order {
   display: flex;
   flex-direction: row;
@@ -413,7 +414,6 @@ header i {
   height: 50px;
 }
 
-/*Bouton commander*/
 .button:hover {
   filter: brightness(110%);
   box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);

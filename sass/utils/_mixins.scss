@@ -59,6 +59,7 @@ exemples @mixin btn {
     padding: 0;
     list-style: none;
 }
+
 /*Disposition*/
 @mixin vertical-display {
     display: flex;
@@ -84,9 +85,9 @@ exemples @mixin btn {
     @include row-display;
     @include center-elements;
 }
+
 /*Coeur*/
-@mixin heart-style
-{
+@mixin heart-style {
     font-size: 24px;
     padding: 10px;
     cursor: pointer;
@@ -103,11 +104,10 @@ exemples @mixin btn {
     /*ce qui dépasse est transparent*/
     transition: 400ms ease-in-out;
 }
+
 /*Nombres*/
-@mixin number-circle
-{
+@mixin number-circle {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-
 }

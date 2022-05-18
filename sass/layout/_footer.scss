@@ -6,7 +6,7 @@ footer {
     gap: 10px;
     padding: 20px 20px;
     background-color: $footer-bg;
-    position: static;
+    //position: static; pour le responsive
 
     >p {
         font-size: 20px;
@@ -34,7 +34,6 @@ footer {
                 font-size: 16px;
             }
         }
-
     }
 }
 
