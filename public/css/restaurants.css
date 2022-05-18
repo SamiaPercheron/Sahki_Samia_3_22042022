@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*Police*/
 /*Couleurs principales*/
+/*Couleur hover liste fonctionnement*/
 /*Nuances de gris*/
 /*Bouton*/
 /*Dégradé de clouleur*/
 /*Cartes*/
-/*à supprimer ?*/
 /*Ombre*/
 /*Icônes*/
 /*Numéros*/
@@ -139,7 +139,7 @@ h2, h3, h4, p {
   font-family: "roboto", sans-serif;
 }
 
-* a {
+a {
   text-decoration: none;
   color: black;
 }

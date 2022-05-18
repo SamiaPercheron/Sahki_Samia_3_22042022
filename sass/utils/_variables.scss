@@ -8,6 +8,8 @@ $colour-secondary: #ff79DA;
 $colour-tertiary: #99e2D0;
 $main-txt-color: #000000;
 
+/*Couleur hover liste fonctionnement*/
+$lighten-colour-primary: lighten($colour-primary,35%);
 /*Nuances de gris*/
 $bg-top: #F6F6F6;
 $bg-location: #EAEAEA;
@@ -22,7 +24,7 @@ $radient-bg : linear-gradient(357deg, rgba(169,93,220,1) 2%, rgba(255,121,218,1)
 /*Cartes*/
 $cards-bg: #f0f0f0;
 $cards-border-radius: 15px;
-$tagcard-darken-color: darken($colour-tertiary, 40%);/*à supprimer ?*/
+$tagcard-darken-color: darken($colour-tertiary, 40%);
 
 /*Ombre*/
 $box-shadow : 6px 6px 9px 0px rgba(0,0,0,0.1);

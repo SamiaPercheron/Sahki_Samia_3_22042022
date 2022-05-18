@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*Police*/
 /*Couleurs principales*/
+/*Couleur hover liste fonctionnement*/
 /*Nuances de gris*/
 /*Bouton*/
 /*Dégradé de clouleur*/
 /*Cartes*/
-/*à supprimer ?*/
 /*Ombre*/
 /*Icônes*/
 /*Numéros*/
@@ -139,7 +139,7 @@ h2, h3, h4, p {
   font-family: "roboto", sans-serif;
 }
 
-* a {
+a {
   text-decoration: none;
   color: black;
 }
@@ -451,17 +451,19 @@ span {
   width: auto;
   height: 70px;
   align-items: center;
-  border: 2px solid #F6F6F6;
   position: relative;
   gap: 20px;
-  /*problème alignement icones et p */
-  background-color: white;
+  background-color: #F6F6F6;
   box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
 }
 .function__list li p {
   font-weight: 700;
-  font-family: roboto;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #f2eafb;
 }
 
 /*Nombres*/

@@ -13,8 +13,7 @@
 @import "./pages/accueil/fonctionnement";
 @import "./pages/restaurants/menu";
 
-.loading
-{
+.loading {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,46 +21,45 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(45deg,transparent,transparent 40%, (#9356dc, #ff79da));
+    background: linear-gradient(45deg, transparent, transparent 40%, (#9356dc, #ff79da));
     animation: animate 2s linear infinite;
 }
-@keyframes animate
-{
-    0% 
-    {
+
+@keyframes animate {
+    0% {
         transform: rotate(0deg);
         filter: hue-rotate(0deg);
     }
-    100%
-    {
+
+    100% {
         transform: rotate(360deg);
-        filter:hue-rotate(360deg);
+        filter: hue-rotate(360deg);
     }
 }
-.loading::before
-{
-    content:"";
+
+.loading::before {
+    content: "";
     position: absolute;
     top: 6px;
     left: 6px;
     right: 6px;
-    bottom:6px;
-    background:white;
-    border-radius:50%;
-    z-index:1000;
+    bottom: 6px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1000;
 }
 
-.loading::after{
+.loading::after {
 
     content: "";
     position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
-    bottom:0px;
-    background:linear-gradient(45deg,transparent,transparent 40%, (#9356dc, #ff79da));
-    border-radius: 50%; 
-    z-index:1000;
+    bottom: 0px;
+    background: linear-gradient(45deg, transparent, transparent 40%, (#9356dc, #ff79da));
+    border-radius: 50%;
+    z-index: 1000;
     z-index: 1;
     filter: blur(30px);
 }
@@ -137,43 +135,44 @@
             width: auto;
             height: 70px;
             align-items: center;
-            border: 2px solid $bg-top;
             position: relative;
             gap: 20px;
-            /*problème alignement icones et p */
-            background-color: white;
+            background-color: #F6F6F6;
             box-shadow: $box-shadow;
             border-radius: 25px;
 
             p {
                 font-weight: 700;
-                font-family: roboto;
             }
         }
 
-        //li :hover violet clair à faire
-
     }
 }
 
-/*Nombres*/
-.number {
-    @include horizontal-center-position;
-    @include number-circle;
-    font-size: 13px;
-    margin-left: -15px;
-    border: 1px solid $colour-primary;
-    background-color: $colour-primary;
-    color: $number-color;
-}
+li:hover {
+            cursor: pointer;
+            background-color:$lighten-colour-primary;
+        }
 
-/*Icônes*/
-.icon {
-    @include horizontal-center-position;
-    color: $icon-color;
-    font-size: 17px;
 
-    :hover {
-        color: $colour-primary;
+    /*Nombres*/
+    .number {
+        @include horizontal-center-position;
+        @include number-circle;
+        font-size: 13px;
+        margin-left: -15px;
+        border: 1px solid $colour-primary;
+        background-color: $colour-primary;
+        color: $number-color;
     }
-}
+
+    /*Icônes*/
+    .icon {
+        @include horizontal-center-position;
+        color: $icon-color;
+        font-size: 17px;
+
+        :hover {
+            color: $colour-primary;
+        }
+    }
