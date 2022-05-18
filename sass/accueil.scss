@@ -14,15 +14,16 @@
 @import "./pages/restaurants/menu";
 
 .loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 150px;
-    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     background: linear-gradient(45deg, transparent, transparent 40%, (#9356dc, #ff79da));
-    animation: animate 2s linear infinite;
+    animation:animate 3s linear 500ms forwards;
+  
 }
 
 @keyframes animate {
@@ -31,9 +32,36 @@
         filter: hue-rotate(0deg);
     }
 
+    65% {
+        opacity: 0.5;
+    }
+
+    99% {
+    width: 200px;
+    height:200px;
+    }
+
     100% {
+        opacity: 0;
+        width: 0px;
+        height: 0px;
         transform: rotate(360deg);
         filter: hue-rotate(360deg);
+    }
+}
+
+.primary-content {
+    animation: fade-in 4s forwards;
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
     }
 }
 
@@ -44,7 +72,7 @@
     left: 6px;
     right: 6px;
     bottom: 6px;
-    background: white;
+    background:white;
     border-radius: 50%;
     z-index: 1000;
 }
@@ -60,15 +88,12 @@
     background: linear-gradient(45deg, transparent, transparent 40%, (#9356dc, #ff79da));
     border-radius: 50%;
     z-index: 1000;
-    z-index: 1;
-    filter: blur(30px);
+    //z-index: 1;
+    filter: blur(50px);
 }
 
 /**********Section 1**********/
-.location
-
-/*pb pour centrer */
-    {
+.location {
     @include horizontal-center-position;
     height: 50px;
     gap: 10px;
@@ -83,7 +108,6 @@
         background-color: transparent;
         font-size: 15px;
         width: 120px;
-        /*cliquable ? */
     }
 }
 
@@ -150,29 +174,29 @@
 }
 
 li:hover {
-            cursor: pointer;
-            background-color:$lighten-colour-primary;
-        }
+    cursor: pointer;
+    background-color: $lighten-colour-primary;
+}
 
 
-    /*Nombres*/
-    .number {
-        @include horizontal-center-position;
-        @include number-circle;
-        font-size: 13px;
-        margin-left: -15px;
-        border: 1px solid $colour-primary;
-        background-color: $colour-primary;
-        color: $number-color;
+/*Nombres*/
+.number {
+    @include horizontal-center-position;
+    @include number-circle;
+    font-size: 13px;
+    margin-left: -15px;
+    border: 1px solid $colour-primary;
+    background-color: $colour-primary;
+    color: $number-color;
+}
+
+/*Icônes*/
+.icon {
+    @include horizontal-center-position;
+    color: $icon-color;
+    font-size: 17px;
+
+    :hover {
+        color: $colour-primary;
     }
-
-    /*Icônes*/
-    .icon {
-        @include horizontal-center-position;
-        color: $icon-color;
-        font-size: 17px;
-
-        :hover {
-            color: $colour-primary;
-        }
-    }
+}
