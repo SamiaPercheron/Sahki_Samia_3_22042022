@@ -50,8 +50,8 @@
   
   .dish {
     display: flex;
-    //width: 360px;
-  
+    width: 100%;
+    cursor: pointer;
     overflow: hidden;
     position: relative;
     background-color: $cards-bg;
@@ -59,7 +59,7 @@
     border-radius: 15px;
     animation: appear 1s;
     animation-fill-mode: both;
-    transform: scale(0);
+ 
     &__info {
       @include vertical-display;
       padding: 10px;
