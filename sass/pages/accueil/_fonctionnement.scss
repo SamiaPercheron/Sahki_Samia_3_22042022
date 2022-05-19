@@ -32,11 +32,9 @@
     }
 }
 
-li:hover,
-.icon:hover {
+li:hover{
     cursor: pointer;
     background-color: $lighten-colour-primary;
-    color: $colour-primary; //couleur du texte ou pas ?
 }
 
 
@@ -60,4 +58,10 @@ li:hover,
     /* :hover {
         color: $colour-primary;
     }*/
+}
+
+.icon:hover {
+    cursor: pointer;
+    background-color: $lighten-colour-primary;
+    color: $colour-primary;
 }

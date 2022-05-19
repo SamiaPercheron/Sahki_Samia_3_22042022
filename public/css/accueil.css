@@ -546,11 +546,9 @@ span {
   font-weight: 500;
 }
 
-li:hover,
-.icon:hover {
+li:hover {
   cursor: pointer;
   background-color: #f2eafb;
-  color: #9356DC;
 }
 
 /*Nombres*/
@@ -580,6 +578,12 @@ li:hover,
   /* :hover {
       color: $colour-primary;
   }*/
+}
+
+.icon:hover {
+  cursor: pointer;
+  background-color: #f2eafb;
+  color: #9356DC;
 }
 
 /**********Restaurant**********/
