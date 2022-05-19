@@ -1,20 +1,66 @@
 .button {
-    display: flex;
-    align-items: center;
-    max-width: 300px;
-    height: 45px;
-    color: $btn-txt-color;
-    background: $radient-bg;
-    padding: 0px 0px;
-    border-radius: $btn-border-radius;
-    padding: 0 20px 0 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  height: 45px;
+  color: $btn-txt-color;
+  background: $radient-bg;
+
+  border-radius: $btn-border-radius;
+  padding: 0 20px 0 20px;
+  font-size: 16px;
+  border: none;
+
 }
 
 .button:hover {
-    filter: brightness(110%);
-    box-shadow: $box-shadow;
-    transition: 400ms ease-in-out;
+  filter: brightness(110%);
+  box-shadow: $box-shadow;
+  transition: 400ms ease-in-out;
+  cursor: pointer;
 }
+
+/*Bouton commander*/
+.order {
+  @include row-display;
+  justify-content: center;
+  margin-bottom: 70px;
+
+  .button {
+    justify-content: center;
+    width: 50%;
+    height: 50px;
+  }
+
+}
+
+.button:hover {
+  filter: brightness(110%);
+  box-shadow: $box-shadow;
+  transition: 400ms ease-in-out;
+}
+
+/*.gradient-button{
+  width: 250px;
+  height: 45px;
+  color: $btn-txt-color;
+  background: $radient-bg;
+  border-radius: $btn-border-radius;
+  border: none;
+  border-radius: $btn-border-radius;
+  font-size: 16px;
+  &--smaller{
+    width:175px;
+  }
+  &--center{
+    display:block;
+    margin:auto;
+  }
+  &:hover{
+  filter: brightness(110%);
+  box-shadow: $box-shadow;
+  transition: 400ms ease-in-out;  
+  cursor: pointer;
+  }
+
+}*/

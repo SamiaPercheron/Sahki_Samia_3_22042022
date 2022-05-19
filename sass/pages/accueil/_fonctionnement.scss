@@ -1,0 +1,63 @@
+/*************Section 3 function**********/
+.function {
+    @include vertical-display;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 45px 20px 55px 20px;
+    align-items: center;
+
+    &__list {
+        @include vertical-display;
+        @include reset-list;
+        width: 100%;
+        gap: 20px;
+
+        li {
+            @include row-display;
+            width: auto;
+            height: 70px;
+            align-items: center;
+            position: relative;
+            gap: 20px;
+            background-color: #F6F6F6;
+            box-shadow: $box-shadow;
+            border-radius: 25px;
+
+            p {
+                font-weight: 500;
+            }
+        }
+
+    }
+}
+
+li:hover,
+.icon:hover {
+    cursor: pointer;
+    background-color: $lighten-colour-primary;
+    color: $colour-primary; //couleur du texte ou pas ?
+}
+
+
+/*Nombres*/
+.number {
+    @include horizontal-center-position;
+    @include number-circle;
+    font-size: 13px;
+    margin-left: -15px;
+    border: 1px solid $colour-primary;
+    background-color: $colour-primary;
+    color: $number-color;
+}
+
+/*Icônes*/
+.icon {
+    @include horizontal-center-position;
+    color: $icon-color;
+    font-size: 17px;
+
+    /* :hover {
+        color: $colour-primary;
+    }*/
+}

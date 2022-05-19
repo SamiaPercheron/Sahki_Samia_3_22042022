@@ -67,12 +67,125 @@ exemples @mixin btn {
 /*Disposition*/
 /*Coeur*/
 /*Nombres*/
+/**********Loader************/
+.div_loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: div_loading 4s linear 500ms forwards;
+}
+.div_loading .loading {
+  width: 180px;
+  height: 180px;
+  z-index: 1000;
+  border-radius: 50%;
+  border: #99e2D0 3px solid;
+  background: linear-gradient(45deg, transparent, transparent 40%, #9356DC, #ff79DA);
+  animation: animate 4s linear 500ms forwards;
+}
+.div_loading .loading::before {
+  content: "";
+  background: white;
+}
+.div_loading .loading::after {
+  z-index: 1;
+  filter: blur(40px);
+}
+.div_loading .loading::after + .div_loading {
+  z-index: 0;
+}
+
+@keyframes div_loading {
+  to {
+    transform: translate3d(0, -4rem, 0);
+    color: #99e2D0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  75% {
+    opacity: 0.4;
+  }
+  99% {
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    transform: rotate(360deg);
+  }
+}
+.primary-content {
+  animation: fade-in 4s forwards;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/**********Animations page restaurant**********/
+/*Animation prix et icône "check" qui tourne*/
+.dish:hover .check {
+  margin-right: 0;
+}
+.dish:hover i {
+  animation: rotation 500ms ease-in-out;
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.check {
+  background-color: #99e2D0;
+  margin-right: -60px;
+  width: 60px;
+  transition: 400ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.check i {
+  color: white;
+  font-size: 20px;
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(-360deg);
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+/*Animation menu qui apparaît progressivement dans la page restaurant*/
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 #bloc-page {
@@ -109,33 +222,7 @@ p {
   font-size: 15px;
 }
 
-/*body {
-    font-family: 'Roboto', sans-serif;
-    color: $colour-primary;
-    font-size: 2rem;
-    font-weight: 100;
-    line-height: 1.7;
-}
-
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-size: 5rem;
-    font-style: italic;
-}
-
-textarea {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 2rem;
-}
-
-button {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 2.75rem;*/
-h2, h3, h4, p {
+h1, h2, h3, h4, p {
   font-family: "roboto", sans-serif;
 }
 
@@ -144,6 +231,7 @@ a {
   color: black;
 }
 
+/***********Header page accueil**********/
 header {
   display: flex;
   width: 100%;
@@ -161,6 +249,17 @@ header {
 }
 .header__logo img {
   width: 160px;
+}
+
+/**********Header page restaurant**********/
+header {
+  align-items: center;
+  box-shadow: none;
+  padding: 0 25px 0 25px;
+}
+
+header i {
+  font-size: 23px;
 }
 
 /**********Footer**********/
@@ -184,19 +283,25 @@ footer ul {
   flex-direction: column;
   gap: 5px;
 }
-footer ul a {
+footer ul li {
+  background-color: transparent;
+}
+footer ul li a {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-footer ul a i {
+footer ul li a i {
   width: 15px;
   font-size: 12px;
   color: #f0f0f0;
 }
-footer ul a p {
+footer ul li a p {
   color: #f0f0f0;
   font-size: 16px;
+}
+footer ul li:hover {
+  background-color: transparent;
 }
 
 .footer__info {
@@ -208,16 +313,34 @@ footer ul a p {
 .button {
   display: flex;
   align-items: center;
-  max-width: 300px;
+  width: 250px;
   height: 45px;
   color: #f0f0f0;
   background: linear-gradient(357deg, rgb(169, 93, 220) 2%, rgb(255, 121, 218) 91%);
-  padding: 0px 0px;
   border-radius: 40px;
   padding: 0 20px 0 20px;
   font-size: 16px;
   border: none;
+}
+
+.button:hover {
+  filter: brightness(110%);
+  box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
+  transition: 400ms ease-in-out;
   cursor: pointer;
+}
+
+/*Bouton commander*/
+.order {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.order .button {
+  justify-content: center;
+  width: 50%;
+  height: 50px;
 }
 
 .button:hover {
@@ -226,57 +349,30 @@ footer ul a p {
   transition: 400ms ease-in-out;
 }
 
-#bloc-page {
-  width: 100%;
-  margin: auto;
-}
-
-/**********Header**********/
-header {
-  align-items: center;
-  box-shadow: none;
-  padding: 0 25px 0 25px;
-}
-
-header i {
-  font-size: 23px;
-}
-
-/***********Image***********/
-.picture {
-  width: auto;
-  height: auto;
-  position: relative;
-}
-.picture img {
-  width: 100%;
-  object-fit: cover;
-}
-.picture .title {
-  width: 100%;
-  height: 90px;
-  justify-content: space-between;
-  border-radius: 40px 40px 0 0;
-  background-color: rgb(241, 237, 233);
-  position: absolute;
-  bottom: -50px;
-  padding: 0 20px 0px 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 30px;
-}
-.picture .title h2 {
-  font-size: 26px;
-  font-family: "shrikhand", sans-serif;
-  font-weight: 500;
-  white-space: nowrap;
-}
-.picture .title i {
-  font-size: 24px;
+/*.gradient-button{
+  width: 250px;
+  height: 45px;
+  color: $btn-txt-color;
+  background: $radient-bg;
+  border-radius: $btn-border-radius;
+  border: none;
+  border-radius: $btn-border-radius;
+  font-size: 16px;
+  &--smaller{
+    width:175px;
+  }
+  &--center{
+    display:block;
+    margin:auto;
+  }
+  &:hover{
+  filter: brightness(110%);
+  box-shadow: $box-shadow;
+  transition: 400ms ease-in-out;  
   cursor: pointer;
-}
+  }
 
+}*/
 /**********Restaurant**********/
 .restaurant {
   display: flex;
@@ -344,6 +440,9 @@ header i {
   background-color: #f0f0f0;
   box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  animation: appear 1s;
+  animation-fill-mode: both;
+  transform: scale(0);
 }
 .dish__info {
   display: flex;
@@ -369,55 +468,44 @@ header i {
   white-space: nowrap;
 }
 
-/*Animation prix et check*/
-.dish:hover .check {
-  margin-right: 0;
-}
-.dish:hover i {
-  animation: rotation 500ms ease-in-out;
+#bloc-page {
+  width: 100%;
+  margin: auto;
 }
 
-.price {
-  display: flex;
-  align-items: flex-end;
-  margin-left: auto;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
+/***********Image***********/
+.picture {
+  width: auto;
+  height: auto;
+  position: relative;
 }
-
-.check {
-  background-color: #99e2D0;
-  margin-right: -60px;
-  width: 60px;
-  transition: 400ms ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.picture img {
+  width: 100%;
+  object-fit: cover;
 }
-.check i {
-  color: white;
-  font-size: 20px;
-}
-
-/*Bouton commander*/
-.order {
+.picture .title {
+  width: 100%;
+  height: 90px;
+  justify-content: space-between;
+  border-radius: 40px 40px 0 0;
+  background-color: rgb(241, 237, 233);
+  position: absolute;
+  bottom: -50px;
+  padding: 0 20px 0px 20px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin-bottom: 70px;
+  align-items: center;
+  margin-top: 30px;
 }
-.order .button {
-  justify-content: center;
-  width: 50%;
-  height: 50px;
+.picture .title h1 {
+  font-size: 26px;
+  font-family: "shrikhand", sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
 }
-
-.button:hover {
-  filter: brightness(110%);
-  box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
-  transition: 4 0ms ease-in-out;
+.picture .title i {
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=restaurants.css.map */

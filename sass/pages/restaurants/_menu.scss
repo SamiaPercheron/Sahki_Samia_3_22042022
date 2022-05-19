@@ -1,0 +1,87 @@
+/**********Restaurant**********/
+.restaurant {
+    @include vertical-display;
+    width: auto;
+    height: auto;
+    gap: 30px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.883);
+    position: relative;
+    // top: 310px;
+  }
+  
+  .heart:hover i {
+    @include heart-hover;
+  }
+  
+  .menu {
+    @include vertical-display;
+    gap: 40px;
+    background-color: rgb(241, 237, 233);
+    width: 100%;
+    padding: 0 10px 0px 10px;
+  }
+  
+  .menu__kind {
+    @include vertical-display;
+    gap: 10px;
+  
+    &__submenu {
+      margin: 0 10px 0px 10px;
+      padding-bottom: 4px;
+      border-bottom: solid;
+      width: 50px;
+      color: $colour-tertiary;
+      border-bottom-width: 3.5px;
+  
+      h2 {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 18px;
+      }
+    }
+  
+    &__container {
+      @include vertical-display;
+      @include reset-list;
+      gap: 15px;
+    }
+  }
+  
+  .dish {
+    display: flex;
+    //width: 360px;
+  
+    overflow: hidden;
+    position: relative;
+    background-color: $cards-bg;
+    box-shadow: $box-shadow;
+    border-radius: 15px;
+    animation: appear 1s;
+    animation-fill-mode: both;
+    transform: scale(0);
+    &__info {
+      @include vertical-display;
+      padding: 10px;
+      gap: 3px;
+      justify-content: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+  
+      h3 {
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+  
+      p {
+        font-weight: 400;
+        font-size: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }

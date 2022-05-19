@@ -1,9 +1,148 @@
-@keyframes rotation {
-0% {
-    transform:rotate(-360deg);
+/**********Loader************/
+.div_loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: div_loading 4s linear 500ms forwards;
+
+    .loading {
+        width: 180px;
+        height: 180px;
+        z-index: 1000;
+        border-radius: 50%;
+        border: $colour-tertiary 3px solid;
+        background: linear-gradient(45deg, transparent, transparent 40%, ($colour-primary, $colour-secondary, ));
+        animation: animate 4s linear 500ms forwards;
+    }
+
+    .loading::before {
+        content: "";
+        background: white;
+    }
+
+    .loading::after {
+        z-index: 1;
+
+        +.div_loading {
+            z-index: 0;
+        }
+
+        filter: blur(40px);
+    }
 }
 
-100% {
-    transform:rotate(0deg);
+@keyframes div_loading {
+    to {
+        transform: translate3d(0, -4rem, 0);
+        color: $colour-tertiary;
+        opacity: 0;
+        visibility: hidden;
+    }
 }
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        opacity: 0.4;
+    }
+
+    99% {
+        width: 200px;
+        height: 200px;
+    }
+
+    100% {
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+        transform: rotate(360deg);
+
+    }
+}
+
+.primary-content {
+    animation: fade-in 4s forwards;
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+/**********Animations page restaurant**********/
+
+/*Animation prix et icône "check" qui tourne*/
+.dish:hover {
+    .check {
+        margin-right: 0;
+    }
+
+    i {
+        animation: rotation 500ms ease-in-out;
+    }
+}
+
+.price {
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.check {
+    background-color: $colour-tertiary;
+    margin-right: -60px;
+    width: 60px;
+    transition: 400ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+        color: white;
+        font-size: 20px;
+    }
+
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/*Animation menu qui apparaît progressivement dans la page restaurant*/
+@keyframes appear {
+    0% {
+        transform: scale(0);
+        // opacity: 0;
+
+    }
+
+    100% {
+        transform: scale(1);
+        //opacity: 1;
+
+    }
 }

@@ -18,10 +18,12 @@ footer {
     ul {
         @include vertical-display;
         gap: 5px;
-
+li{
+    background-color: transparent;
         a {
             @include row-display;
             gap: 10px;
+        
 
             i {
                 width: 15px;
@@ -34,6 +36,10 @@ footer {
                 font-size: 16px;
             }
         }
+    }
+    li:hover{
+        background-color: transparent;
+    }
     }
 }
 

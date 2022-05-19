@@ -13,84 +13,6 @@
 @import "./pages/accueil/fonctionnement";
 @import "./pages/restaurants/menu";
 
-.loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1000;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, transparent, transparent 40%, (#9356dc, #ff79da));
-    animation:animate 3s linear 500ms forwards;
-  
-}
-
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-        filter: hue-rotate(0deg);
-    }
-
-    65% {
-        opacity: 0.5;
-    }
-
-    99% {
-    width: 200px;
-    height:200px;
-    }
-
-    100% {
-        opacity: 0;
-        width: 0px;
-        height: 0px;
-        transform: rotate(360deg);
-        filter: hue-rotate(360deg);
-    }
-}
-
-.primary-content {
-    animation: fade-in 4s forwards;
-    opacity: 0;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0%;
-    }
-
-    100% {
-        opacity: 100%;
-    }
-}
-
-.loading::before {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    right: 6px;
-    bottom: 6px;
-    background:white;
-    border-radius: 50%;
-    z-index: 1000;
-}
-
-.loading::after {
-
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: linear-gradient(45deg, transparent, transparent 40%, (#9356dc, #ff79da));
-    border-radius: 50%;
-    z-index: 1000;
-    //z-index: 1;
-    filter: blur(50px);
-}
 
 /**********Section 1**********/
 .location {
@@ -123,7 +45,7 @@
         @include vertical-center-position;
         gap: 10px;
 
-        h2 {
+        h1 {
             font-size: 20px;
             text-align: center;
             font-weight: 900;
@@ -138,65 +60,3 @@
     }
 }
 
-
-/*************Section 3 function**********/
-.function {
-    @include vertical-display;
-    width: 100%;
-    height: auto;
-    gap: 20px;
-    padding: 45px 20px 55px 20px;
-    align-items: center;
-
-    &__list {
-        @include vertical-display;
-        @include reset-list;
-        width: 100%;
-        gap: 20px;
-
-        li {
-            @include row-display;
-            width: auto;
-            height: 70px;
-            align-items: center;
-            position: relative;
-            gap: 20px;
-            background-color: #F6F6F6;
-            box-shadow: $box-shadow;
-            border-radius: 25px;
-
-            p {
-                font-weight: 700;
-            }
-        }
-
-    }
-}
-
-li:hover {
-    cursor: pointer;
-    background-color: $lighten-colour-primary;
-}
-
-
-/*Nombres*/
-.number {
-    @include horizontal-center-position;
-    @include number-circle;
-    font-size: 13px;
-    margin-left: -15px;
-    border: 1px solid $colour-primary;
-    background-color: $colour-primary;
-    color: $number-color;
-}
-
-/*Icônes*/
-.icon {
-    @include horizontal-center-position;
-    color: $icon-color;
-    font-size: 17px;
-
-    :hover {
-        color: $colour-primary;
-    }
-}
