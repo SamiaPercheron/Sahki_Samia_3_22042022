@@ -8,28 +8,26 @@
     padding: 45px 20px 45px 20px;
 }
 
-.resto__container {
-    @include vertical-display;
-    width: 100%;
-    height: 100%;
-    gap: 20px;
+/*-----Responsive mobile-----*/
+/*Cartes restaurants en colonne*/
 
-    &__container {
+@media screen and (max-width:767px) {
+
+    .resto__container {
         @include vertical-display;
         width: 100%;
         height: 100%;
         gap: 20px;
-    }
-}
 
-.resto__container__card {
-    width: 100%;
-    height: 250px;
-    box-shadow: $box-shadow;
-    transition: 0.3s;
-    border-radius: $cards-border-radius;
-    position: relative;
-    background-color: $cards-bg;
+        &__card {
+            width: 100%;
+            height: 250px;
+            box-shadow: $box-shadow;
+            border-radius: $cards-border-radius;
+            position: relative;
+            background-color: $cards-bg;
+        }
+    }
 }
 
 .photo {
@@ -60,7 +58,6 @@ span {
     font-family: $txt-font-fa;
 }
 
-
 .info {
     @include row-display;
     align-items: center;
@@ -76,7 +73,6 @@ span {
 
 .info a p {
     font-size: 16px;
-    /*ne fonctionne pas*/
 }
 
 .info a h3 {
@@ -89,4 +85,27 @@ span {
 
 .heart:hover i {
     @include heart-hover;
+}
+
+
+/*-----Responsive tablette et desktop-----*/
+/*Les cartes restaurants apparaissent par 2 sur 2 lignes*/
+@media screen and (min-width:768px) {
+    .resto__container {
+        @include row-display;/*Disposition horizontale*/
+        width: 100%;
+        height: 100%;
+        gap: 29px;
+        flex-wrap: wrap;/*Retour à la ligne*/
+
+        /*pb leger vide à droite*/
+        &__card {
+            width: 48%;/*Ajout d'une largeur fixe de carte*/
+            height: 250px;
+            box-shadow: $box-shadow;
+            border-radius: $cards-border-radius;
+            position: relative;
+            background-color: $cards-bg;
+        }
+    }
 }

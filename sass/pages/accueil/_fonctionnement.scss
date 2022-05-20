@@ -1,17 +1,23 @@
 /*************Section 3 function**********/
+
+/*------Responsive mobile et tablette-----*/
+/*Disposition en colonne*/
+@media screen and (max-width:1023px) {
+    
 .function {
     @include vertical-display;
     width: 100%;
     height: auto;
     gap: 20px;
     padding: 45px 20px 55px 20px;
-    align-items: center;
+  
 
     &__list {
         @include vertical-display;
         @include reset-list;
         width: 100%;
         gap: 20px;
+        padding-left: 15px;
 
         li {
             @include row-display;
@@ -31,19 +37,59 @@
 
     }
 }
+}
+
+/*-----Responsive desktop-----*/
+/*Disposition horizontale*/
+@media screen and (min-width:1024px){
+    .function {
+        @include vertical-display;
+        width: 100%;
+        height: 210px;
+        gap: 20px;
+        padding: 45px 20px 45px 20px;
+       
+      
+    
+        &__list {
+            @include row-display;
+            @include reset-list;
+            width: 100%;
+            justify-content: space-between;
+            padding-left: 15px;
+            li {
+                @include row-display;
+                width: 30%;
+                height: 70px;
+                align-items: center;
+                position: relative;
+                gap: 20px;
+                background-color: #F6F6F6;
+                box-shadow: $box-shadow;
+                border-radius: 25px;
+    
+                p {
+                    font-weight: 500;
+                }
+            }
+    
+        }
+    }
+    }
+
+
 
 li:hover{
     cursor: pointer;
     background-color: $lighten-colour-primary;
 }
 
-
 /*Nombres*/
 .number {
     @include horizontal-center-position;
     @include number-circle;
     font-size: 13px;
-    margin-left: -15px;
+    margin-left: -13px;
     border: 1px solid $colour-primary;
     background-color: $colour-primary;
     color: $number-color;
