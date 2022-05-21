@@ -22,9 +22,10 @@
 
 /*Bouton commander*/
 .order {
-  @include row-display;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 70px;
+  height: 150px;
 
   .button {
     justify-content: center;

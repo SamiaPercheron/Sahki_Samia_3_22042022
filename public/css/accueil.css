@@ -227,12 +227,6 @@ exemples @mixin btn {
   margin: auto;
 }
 
-/*body {
-
-    margin: auto;
-    font-family: $txt-font-fa;
-    width: 400px;
-*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -305,6 +299,7 @@ footer {
   gap: 10px;
   padding: 20px 20px;
   background-color: #353535;
+  bottom: 0;
 }
 footer > p {
   font-size: 20px;
@@ -368,9 +363,9 @@ footer ul li:hover {
 /*Bouton commander*/
 .order {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 70px;
+  height: 150px;
 }
 .order .button {
   justify-content: center;
@@ -669,18 +664,34 @@ li:hover {
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
   background-color: rgb(241, 237, 233);
   width: 100%;
   padding: 0 10px 0px 10px;
+}
+@media screen and (max-width: 1023px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .menu__kind {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .menu__kind {
+    width: 24%;
+  }
 }
 .menu__kind__submenu {
   margin: 0 10px 0px 10px;
@@ -694,6 +705,27 @@ li:hover {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 18px;
+}
+@media screen and (min-width: 1024px) {
+  .menu__kind .menu__kind {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+  }
+  .menu__kind .menu__kind__submenu {
+    margin: 0 10px 0px 10px;
+    padding-bottom: 4px;
+    border-bottom: solid;
+    width: 50px;
+    color: #99e2D0;
+    border-bottom-width: 3.5px;
+  }
+  .menu__kind .menu__kind__submenu h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+  }
 }
 .menu__kind__container {
   display: flex;
