@@ -26,7 +26,6 @@ footer {
                 @include row-display;
                 gap: 10px;
 
-
                 i {
                     width: 15px;
                     font-size: 12px;
@@ -49,4 +48,3 @@ footer {
 .footer__info {
     @include reset-list;
 }
-

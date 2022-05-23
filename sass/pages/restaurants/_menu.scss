@@ -3,11 +3,9 @@
   @include vertical-display;
   width: auto;
   height: auto;
-  gap: 30px;
   margin-top: 50px;
   background-color: rgba(255, 255, 255, 0.883);
   position: relative;
-  // top: 310px;
 }
 
 .heart:hover i {
@@ -17,25 +15,19 @@
 .menu {
   background-color: rgb(241, 237, 233);
   width: 100%;
+  height: 100%;
+  padding: 0 10px 0px 10px;
+  justify-content: space-between;
 
-  @media screen and (max-width:1023px)
-
-  /*Responsive mobile: menu vertical*/
-    {
+  @media screen and (max-width:1023px)/*Responsive mobile : menu vertical*/
+  {
     @include vertical-display;
-    gap: 40px;  
-    padding: 0 10px 0px 10px;
   }
 
-  @media screen and (min-width:1024px)
-
-  /*Responsive desktop:menu horizontal*/
-    {
+  @media screen and (min-width:1024px) /*Responsive desktop : menu horizontal*/
+  {
     @include row-display;
-    justify-content: space-between;
-    padding: 0 10px 70px 10px;
   }
-
 
 }
 
@@ -43,8 +35,10 @@
   @include vertical-display;
   gap: 10px;
 
-  @media screen and (min-width:1024px) {
-    width: 30%;
+  @media screen and (min-width:1024px) 
+  {
+    width: 30%;/*Responsive desktop:taille fixe des cartes*/
+    gap: 20px;/*Responsive desktop:augmentation de l'espace*/
   }
 
   &__submenu {
@@ -54,13 +48,14 @@
     width: 50px;
     color: $colour-tertiary;
     border-bottom-width: 3.5px;
- 
-    h2 {   
+
+    h2 {
       font-size: 18px;
       text-transform: uppercase;
       font-weight: 400;
-      @media screen and (min-width:1024px){
-        font-size: 20px;
+
+      @media screen and (min-width:1024px) {
+        font-size: 20px;/*Responsive desktop*/
       }
     }
   }
@@ -73,14 +68,14 @@
       gap: 15px;
     }
 
-      @media screen and (min-width:1024px) {
+    @media screen and (min-width:1024px) {
       gap: 25px;
     }
   }
 
 }
 
-.dish {
+.dish {/*Cartes*/
   display: flex;
   width: 100%;
   cursor: pointer;
@@ -92,12 +87,12 @@
   animation: appear 1s;
   animation-fill-mode: both;
 
-  @media screen and (max-width:1023px){
+  @media screen and (max-width:1023px) {
     height: auto;
   }
 
-  @media screen and (min-width:1024px){
-    height: 80px;
+  @media screen and (min-width:1024px) {
+    height: 80px;/*Responsive desktop : augmentation hauteur cartes pour le visuel*/
   }
 
   &__info {
@@ -109,7 +104,8 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 
-    h3,p {
+    h3,
+    p {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;

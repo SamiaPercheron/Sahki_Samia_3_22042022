@@ -1,23 +1,30 @@
-.button {
-  display: flex;
-  align-items: center;
+/*Boutons explorer nos restaurants et commander*/
+
+.gradient-button {
   width: 250px;
   height: 45px;
   color: $btn-txt-color;
   background: $radient-bg;
-  justify-content: center;
   border-radius: $btn-border-radius;
-  padding: 0 20px 0 20px;
-  font-size: 16px;
   border: none;
+  font-size: 16px;
 
-}
+  &--smaller {
+    width: 175px;
+  }
 
-.button:hover {
-  filter: brightness(110%);
-  box-shadow: $box-shadow;
-  transition: 400ms ease-in-out;
-  cursor: pointer;
+  &--center {
+    display: block;
+    margin: auto;
+  }
+
+  &:hover {
+    filter: brightness(110%);
+    box-shadow: $box-shadow;
+    transition: 400ms ease-in-out;
+    cursor: pointer;
+  }
+
 }
 
 /*Bouton commander*/
@@ -26,42 +33,5 @@
   align-items: center;
   justify-content: center;
   height: 150px;
-
-  .button {
-    justify-content: center;
-    width: 50%;
-    height: 50px;
-  }
-
+  background-color: rgb(241, 237, 233);
 }
-
-.button:hover {
-  filter: brightness(110%);
-  box-shadow: $box-shadow;
-  transition: 400ms ease-in-out;
-}
-
-/*.gradient-button{
-  width: 250px;
-  height: 45px;
-  color: $btn-txt-color;
-  background: $radient-bg;
-  border-radius: $btn-border-radius;
-  border: none;
-  border-radius: $btn-border-radius;
-  font-size: 16px;
-  &--smaller{
-    width:175px;
-  }
-  &--center{
-    display:block;
-    margin:auto;
-  }
-  &:hover{
-  filter: brightness(110%);
-  box-shadow: $box-shadow;
-  transition: 400ms ease-in-out;  
-  cursor: pointer;
-  }
-
-}*/

@@ -286,21 +286,24 @@ footer ul li:hover {
   list-style: none;
 }
 
-.button {
-  display: flex;
-  align-items: center;
+/*Boutons explorer nos restaurants et commander*/
+.gradient-button {
   width: 250px;
   height: 45px;
   color: #f0f0f0;
   background: linear-gradient(357deg, rgb(169, 93, 220) 2%, rgb(255, 121, 218) 91%);
-  justify-content: center;
   border-radius: 40px;
-  padding: 0 20px 0 20px;
-  font-size: 16px;
   border: none;
+  font-size: 16px;
 }
-
-.button:hover {
+.gradient-button--smaller {
+  width: 175px;
+}
+.gradient-button--center {
+  display: block;
+  margin: auto;
+}
+.gradient-button:hover {
   filter: brightness(110%);
   box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
   transition: 400ms ease-in-out;
@@ -313,43 +316,9 @@ footer ul li:hover {
   align-items: center;
   justify-content: center;
   height: 150px;
-}
-.order .button {
-  justify-content: center;
-  width: 50%;
-  height: 50px;
+  background-color: rgb(241, 237, 233);
 }
 
-.button:hover {
-  filter: brightness(110%);
-  box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
-  transition: 400ms ease-in-out;
-}
-
-/*.gradient-button{
-  width: 250px;
-  height: 45px;
-  color: $btn-txt-color;
-  background: $radient-bg;
-  border-radius: $btn-border-radius;
-  border: none;
-  border-radius: $btn-border-radius;
-  font-size: 16px;
-  &--smaller{
-    width:175px;
-  }
-  &--center{
-    display:block;
-    margin:auto;
-  }
-  &:hover{
-  filter: brightness(110%);
-  box-shadow: $box-shadow;
-  transition: 400ms ease-in-out;  
-  cursor: pointer;
-  }
-
-}*/
 /***********Section 4:restaurants**********/
 .resto {
   width: 100%;
@@ -361,25 +330,48 @@ footer ul li:hover {
   padding: 45px 20px 45px 20px;
 }
 
-/*-----Responsive mobile-----*/
-/*Cartes restaurants en colonne*/
+.resto__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
 @media screen and (max-width: 767px) {
   .resto__container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
     gap: 20px;
   }
+}
+@media screen and (min-width: 768px) {
+  .resto__container {
+    /*Responsive tablette et desktop*/
+    display: flex;
+    flex-direction: row;
+    /*Disposition horizontale*/
+    gap: 29px;
+    flex-wrap: wrap;
+    /*Retour à la ligne*/
+  }
+}
+.resto__container__card {
+  box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  position: relative;
+  background-color: white;
+}
+@media screen and (max-width: 767px) {
   .resto__container__card {
     width: 100%;
     height: 200px;
-    box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    position: relative;
-    background-color: #f0f0f0;
   }
 }
+@media screen and (min-width: 768px) {
+  .resto__container__card {
+    width: 48%;
+    /*Ajout d'une largeur fixe de carte*/
+    height: 250px;
+  }
+}
+
 .photo {
   display: flex;
   width: 100%;
@@ -447,106 +439,57 @@ span {
   transition: 400ms ease-in-out;
 }
 
-/*-----Responsive tablette et desktop-----*/
-/*Les cartes restaurants apparaissent par 2 sur 2 lignes*/
-@media screen and (min-width: 768px) {
-  .resto__container {
-    display: flex;
-    flex-direction: row;
-    /*Disposition horizontale*/
-    width: 100%;
-    height: 100%;
-    gap: 29px;
-    flex-wrap: wrap;
-    /*Retour à la ligne*/
-    /*pb leger vide à droite*/
-  }
-  .resto__container__card {
-    width: 48%;
-    /*Ajout d'une largeur fixe de carte*/
-    height: 250px;
-    box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    position: relative;
-    background-color: #f0f0f0;
-  }
-}
 /*************Section 3 function**********/
-/*------Responsive mobile et tablette-----*/
-/*Disposition en colonne*/
-@media screen and (max-width: 1023px) {
-  .function {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    gap: 20px;
-    padding: 45px 20px 55px 20px;
-  }
-  .function__list {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 100%;
-    gap: 20px;
-    padding-left: 15px;
-  }
-  .function__list li {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    height: 70px;
-    align-items: center;
-    position: relative;
-    gap: 20px;
-    background-color: #F6F6F6;
-    box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-  }
-  .function__list li p {
-    font-weight: 500;
-  }
+.function {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: 20px;
+  padding: 45px 20px 55px 20px;
 }
-/*-----Responsive desktop-----*/
-/*Disposition horizontale*/
 @media screen and (min-width: 1024px) {
   .function {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
     height: 210px;
-    gap: 20px;
-    padding: 45px 20px 45px 20px;
   }
+}
+.function__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  gap: 20px;
+  padding-left: 15px;
+}
+@media screen and (min-width: 1024px) {
   .function__list {
     display: flex;
     flex-direction: row;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 100%;
+    /*Responsive desktop : dispo horizontale*/
     justify-content: space-between;
-    padding-left: 15px;
-  }
-  .function__list li {
-    display: flex;
-    flex-direction: row;
-    width: 30%;
-    height: 70px;
-    align-items: center;
-    position: relative;
-    gap: 20px;
-    background-color: #F6F6F6;
-    box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-  }
-  .function__list li p {
-    font-weight: 500;
   }
 }
-li:hover {
+.function__list li {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 70px;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  background-color: #F6F6F6;
+  box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+@media screen and (min-width: 1024px) {
+  .function__list li {
+    width: 30%;
+    /*Responsive desktop : largeur fixée*/
+  }
+}
+.function__list li:hover {
   cursor: pointer;
   background-color: #f2eafb;
 }
@@ -561,10 +504,20 @@ li:hover {
   height: 25px;
   border-radius: 50%;
   font-size: 13px;
+  font-weight: 500;
   margin-left: -13px;
   border: 1px solid #9356DC;
   background-color: #9356DC;
   color: #f0f0f0;
+}
+
+.font {
+  font-weight: 600;
+}
+@media screen and (min-width: 1023px) {
+  .font {
+    font-size: 16px;
+  }
 }
 
 /*Icônes*/
@@ -589,7 +542,6 @@ li:hover {
   flex-direction: column;
   width: auto;
   height: auto;
-  gap: 30px;
   margin-top: 50px;
   background-color: rgba(255, 255, 255, 0.883);
   position: relative;
@@ -610,21 +562,20 @@ li:hover {
 .menu {
   background-color: rgb(241, 237, 233);
   width: 100%;
+  height: 100%;
+  padding: 0 10px 0px 10px;
+  justify-content: space-between;
 }
 @media screen and (max-width: 1023px) {
   .menu {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding: 0 10px 0px 10px;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0 10px 70px 10px;
   }
 }
 
@@ -636,6 +587,9 @@ li:hover {
 @media screen and (min-width: 1024px) {
   .menu__kind {
     width: 30%;
+    /*Responsive desktop:taille fixe des cartes*/
+    gap: 20px;
+    /*Responsive desktop:augmentation de l'espace*/
   }
 }
 .menu__kind__submenu {
@@ -654,6 +608,7 @@ li:hover {
 @media screen and (min-width: 1024px) {
   .menu__kind__submenu h2 {
     font-size: 20px;
+    /*Responsive desktop*/
   }
 }
 .menu__kind__container {
@@ -675,12 +630,13 @@ li:hover {
 }
 
 .dish {
+  /*Cartes*/
   display: flex;
   width: 100%;
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  background-color: #f0f0f0;
+  background-color: white;
   box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   animation: appear 1s;
@@ -694,6 +650,7 @@ li:hover {
 @media screen and (min-width: 1024px) {
   .dish {
     height: 80px;
+    /*Responsive desktop : augmentation hauteur cartes pour le visuel*/
   }
 }
 .dish__info {
@@ -706,7 +663,8 @@ li:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.dish__info h3, .dish__info p {
+.dish__info h3,
+.dish__info p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -763,6 +721,11 @@ li:hover {
   font-weight: 300;
   text-align: center;
   margin-bottom: 32px;
+}
+@media screen and (min-width: 768px) {
+  .top__introduction p {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=accueil.css.map */
