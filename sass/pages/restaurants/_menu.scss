@@ -15,13 +15,16 @@
 }
 
 .menu {
+  background-color: rgb(241, 237, 233);
+  width: 100%;
 
   @media screen and (max-width:1023px)
 
   /*Responsive mobile: menu vertical*/
     {
     @include vertical-display;
-    gap: 40px;
+    gap: 40px;  
+    padding: 0 10px 0px 10px;
   }
 
   @media screen and (min-width:1024px)
@@ -30,12 +33,10 @@
     {
     @include row-display;
     justify-content: space-between;
-
+    padding: 0 10px 70px 10px;
   }
 
-  background-color: rgb(241, 237, 233);
-  width: 100%;
-  padding: 0 10px 0px 10px;
+
 }
 
 .menu__kind {
@@ -43,7 +44,7 @@
   gap: 10px;
 
   @media screen and (min-width:1024px) {
-    width: 24%;
+    width: 30%;
   }
 
   &__submenu {
@@ -53,33 +54,13 @@
     width: 50px;
     color: $colour-tertiary;
     border-bottom-width: 3.5px;
-
-    h2 {
+ 
+    h2 {   
+      font-size: 18px;
       text-transform: uppercase;
       font-weight: 400;
-      font-size: 18px;
-    }
-  }
-
-  @media screen and (min-width:1024px) {
-    .menu__kind {
-      @include vertical-display;
-      gap: 10px;
-      width: 30%;
-
-      &__submenu {
-        margin: 0 10px 0px 10px;
-        padding-bottom: 4px;
-        border-bottom: solid;
-        width: 50px;
-        color: $colour-tertiary;
-        border-bottom-width: 3.5px;
-
-        h2 {
-          text-transform: uppercase;
-          font-weight: 400;
-          font-size: 18px;
-        }
+      @media screen and (min-width:1024px){
+        font-size: 20px;
       }
     }
   }
@@ -87,8 +68,16 @@
   &__container {
     @include vertical-display;
     @include reset-list;
-    gap: 15px;
+
+    @media screen and (max-width:1023px) {
+      gap: 15px;
+    }
+
+      @media screen and (min-width:1024px) {
+      gap: 25px;
+    }
   }
+
 }
 
 .dish {
@@ -103,6 +92,14 @@
   animation: appear 1s;
   animation-fill-mode: both;
 
+  @media screen and (max-width:1023px){
+    height: auto;
+  }
+
+  @media screen and (min-width:1024px){
+    height: 80px;
+  }
+
   &__info {
     @include vertical-display;
     padding: 10px;
@@ -112,8 +109,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 
-    h3 {
-      font-size: 18px;
+    h3,p {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -121,10 +117,6 @@
 
     p {
       font-weight: 400;
-      font-size: 15px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
   }
 }
