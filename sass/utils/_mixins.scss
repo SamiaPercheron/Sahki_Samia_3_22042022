@@ -39,14 +39,12 @@
 }
 
 @mixin heart-hover {
-    font-weight: bold;
+    font-weight: bold;/*Ajout pour pouvoir remplir d'une couleur"*/
     background: $radient-bg;
-    background-clip: content-box;
+    background-clip: content-box;/*l'arrière-plan est limité à la zone de contenu*/
     -moz-background-clip: text;
     -webkit-background-clip: text;
-    /*limite le contour de la lettre*/
-    -webkit-text-fill-color: transparent;
-    /*ce qui dépasse est transparent*/
+    -webkit-text-fill-color: transparent;/*ce qui dépasse est transparent*/
     transition: 400ms ease-in-out;
 }
 

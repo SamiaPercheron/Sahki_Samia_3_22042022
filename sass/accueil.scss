@@ -1,6 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/functions";
+
 @import "./utils/animations";
 
 @import "./base/base";
@@ -12,6 +12,7 @@
 @import "./pages/accueil/cards";
 @import "./pages/accueil/fonctionnement";
 @import "./pages/restaurants/menu";
+
 
 /**********Section 1**********/
 /*Ne change pas en responsive*/
