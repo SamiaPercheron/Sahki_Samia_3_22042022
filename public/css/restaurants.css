@@ -16,6 +16,7 @@
 /*Nombres*/
 /**********Loader************/
 .div_loading {
+  /*conteneur*/
   position: fixed;
   width: 100%;
   height: 100%;
@@ -23,24 +24,28 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  /*le loader apparaît en premier plan avant l'apparition de la page accueil*/
   animation: div_loading 4s linear 500ms forwards;
 }
 .div_loading .loading {
+  /*loader*/
   width: 180px;
   height: 180px;
   z-index: 1000;
   border-radius: 50%;
   border: #99e2D0 3px solid;
   background: linear-gradient(45deg, transparent, transparent 40%, #9356DC, #ff79DA);
+  /* dégradé de couleurs avec un transparaence à 40% */
   animation: animate 4s linear 500ms forwards;
+  /*le loader apparaît pdt 4s, tourne avec un rythme régulier (linear) et démarre après un délai de 500ms*/
 }
 .div_loading .loading::before {
   content: "";
-  background: white;
 }
 .div_loading .loading::after {
   z-index: 1;
   filter: blur(40px);
+  /*application d'un flou*/
 }
 .div_loading .loading::after + .div_loading {
   z-index: 0;
@@ -49,23 +54,30 @@
 @keyframes div_loading {
   to {
     transform: translate3d(0, -4rem, 0);
+    /*déplace un élément dans l'espace 3D*/
     color: #99e2D0;
     opacity: 0;
+    /*opacité 0, élément invisible*/
     visibility: hidden;
   }
 }
 @keyframes animate {
+  /*étapes qui composent l'animation*/
   0% {
     transform: rotate(0deg);
+    /*Début de rotation à 0deg, loader visible*/
   }
   75% {
     opacity: 0.4;
+    /*Diminution de l'opacité*/
   }
   99% {
+    /*Augmentation de la taille du loader avant de disparaître*/
     width: 200px;
     height: 200px;
   }
   100% {
+    /*Disparition du loader à 360deg*/
     opacity: 0;
     width: 0px;
     height: 0px;
@@ -73,11 +85,14 @@
   }
 }
 .primary-content {
+  /*correspond à la page accueil*/
   animation: fade-in 4s forwards;
+  /*effet de transition au moment du chargement de la page*/
   opacity: 0;
 }
 
 @keyframes fade-in {
+  /*page accueil qui apparaît progressivement*/
   0% {
     opacity: 0%;
   }
@@ -87,38 +102,36 @@
 }
 /**********Animations page restaurant**********/
 /*Animation prix et icône "check" qui tourne*/
-.dish:hover .check {
-  margin-right: 0;
-}
-.dish:hover i {
-  animation: rotation 500ms ease-in-out;
-}
-
-.price {
-  display: flex;
-  align-items: flex-end;
-  margin-left: auto;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
 .check {
   background-color: #99e2D0;
   margin-right: -60px;
+  /*1.permet de décaler l'élément à doite*/
   width: 60px;
   transition: 400ms ease-in-out;
+  /*début et fin lents sur 400ms*/
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  /*l'élément n'est pas autorisé à se rétrécir*/
 }
 .check i {
   color: white;
   font-size: 20px;
 }
 
+.dish:hover .check {
+  margin-right: 0;
+  /*2.la div check passe d'une margin-right de -60px à 0px et donc se décale sur la gauche*/
+}
+.dish:hover i {
+  /*icône check*/
+  animation: rotation 500ms ease-in-out;
+  /*2.rotation pendant 500ms avec début et fin lents*/
+}
+
 @keyframes rotation {
+  /*rotation de 360degrés*/
   0% {
     transform: rotate(-360deg);
   }
@@ -126,47 +139,28 @@
     transform: rotate(0deg);
   }
 }
-/*Animation menu qui apparaît progressivement dans la page restaurant*/
+/**********Animation menu qui apparaît progressivement dans la page restaurant**********/
 @keyframes appear {
   0% {
     opacity: 0;
-    transform: translateY(50%);
+    /*1.élément non visible*/
+    transform: translateY(30%);
+    /*1.se déplace verticalement de 30%*/
   }
   100% {
     opacity: 1;
+    /*2.devient visible*/
     transform: translateY(0%);
+    /*pas de déplacement vertical=se fixe*/
   }
 }
+/*Délai d'apparition des éléments*/
 .dish:nth-child(2) {
   animation-delay: 0.2s;
 }
 
 .dish:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.dish:nth-child(4) {
-  animation-delay: 0.6s;
-}
-
-.dish:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-.dish:nth-child(6) {
-  animation-delay: 1s;
-}
-
-.dish:nth-child(7) {
-  animation-delay: 1.2s;
-}
-
-.dish:nth-child(8) {
-  animation-delay: 1.4s;
-}
-
-.dish:nth-child(9) {
-  animation-delay: 1.6s;
+  animation-delay: 0.5s;
 }
 
 #bloc-page {
@@ -332,15 +326,15 @@ footer ul li:hover {
 
 .heart:hover i {
   font-weight: bold;
-  /*Ajout pour pouvoir remplir d'une couleur"*/
-  background: linear-gradient(357deg, rgb(169, 93, 220) 2%, rgb(255, 121, 218) 91%);
-  background-clip: content-box;
-  /*l'arrière-plan est limité à la zone de contenu*/
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
+  /*1.Ajout pour pouvoir remplir d'une couleur=coeur noir"*/
   -webkit-text-fill-color: transparent;
-  /*ce qui dépasse est transparent*/
+  /*2.On rend transparent le bold=coeur transparent*/
+  background: linear-gradient(357deg, rgb(169, 93, 220) 2%, rgb(255, 121, 218) 91%);
+  /*3.Ajout du dégradé de couleur=carré de couleur dégradé*/
+  -webkit-background-clip: text;
+  /*4.l'arrière-plan est limité à l'icône= coeur avec couleur*/
   transition: 400ms ease-in-out;
+  /*durée de transition de 400ms et départ et fin lents*/
 }
 
 .menu {
@@ -451,6 +445,15 @@ footer ul li:hover {
 }
 .dish__info p {
   font-weight: 400;
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 #bloc-page {

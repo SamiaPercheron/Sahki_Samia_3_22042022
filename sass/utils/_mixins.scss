@@ -39,13 +39,11 @@
 }
 
 @mixin heart-hover {
-    font-weight: bold;/*Ajout pour pouvoir remplir d'une couleur"*/
-    background: $radient-bg;
-    background-clip: content-box;/*l'arrière-plan est limité à la zone de contenu*/
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;/*ce qui dépasse est transparent*/
-    transition: 400ms ease-in-out;
+    font-weight: bold;/*1.Ajout pour pouvoir remplir d'une couleur=coeur noir"*/
+    -webkit-text-fill-color: transparent;/*2.On rend transparent le bold=coeur transparent*/
+    background: $radient-bg;/*3.Ajout du dégradé de couleur=carré de couleur dégradé*/
+    -webkit-background-clip: text;/*4.l'arrière-plan est limité à l'icône= coeur avec couleur*/
+     transition: 400ms ease-in-out;/*durée de transition de 400ms et départ et fin lents*/
 }
 
 /*Nombres*/

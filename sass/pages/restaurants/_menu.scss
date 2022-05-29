@@ -117,3 +117,12 @@
     }
   }
 }
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
